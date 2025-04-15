@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+.next/
+out/
+
+# Variables de entorno
+.env*.local
+.env
+
+# Otros
+.DS_Store
+*.log
