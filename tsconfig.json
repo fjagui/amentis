@@ -20,7 +20,7 @@
     "baseUrl": ".", // ✅ Añadir baseUrl
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ] // ✅ Apuntar a ./src (o ./app según tu estructura)
     },
     "plugins": [
