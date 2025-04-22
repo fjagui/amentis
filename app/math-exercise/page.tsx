@@ -1,5 +1,5 @@
 // app/math-exercise.js
-import MathExercise from '@/app/components/MathExercise'; // Importar el componente
+import MathExercise from '../components/MathExercise'; // Importar el componente
 
 export default function MathExercisePage() {
   return (
