@@ -1,12 +1,10 @@
+import type { Config } from 'tailwindcss';
 
-        import { TailwindConfig } from 'tailwindcss/tailwind-config';
+const config: Config = {
+  content: [],
+  theme: {
+    extend: {},
+  },
+};
 
-        const config: TailwindConfig = {
-  "content": [],
-  "theme": {
-    "extend": {}
-  }
-}
-
-        module.exports = config
-      
+export default config;
