@@ -12,7 +12,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "moduleResolution": "node16", // ✅ Usar "node" en lugar de "bundler"
-    "module": "esnext",
+    "module": "Node16",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
