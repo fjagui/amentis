@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link'; 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion"; // Importamos framer-motion
 import { FaCheck } from "react-icons/fa"; // Importamos el icono de check
@@ -292,14 +293,17 @@ const MainPage = () => {
       )}
 
       {/* Si la fecha es válida, muestra el siguiente paso */}
-      {validacionFecha && (
-        <button
-          onClick={() => alert("¡Iniciar ejercicios cognitivos!")}
-          className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-700 transition"
-        >
-          Iniciar Ejercicios Cognitivos
-        </button>
-      )}
+      
+{validacionFecha && (
+  <Link href="/math-exercise">  {/* Redirige a la página de MathExercise */}
+    <button
+      onClick={() => alert("¡Iniciar ejercicios cognitivos!")}
+      className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-700 transition"
+    >
+      Iniciar Ejercicios Cognitivos
+    </button>
+  </Link>
+)}
     </div>
   );
 };
