@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaCheck } from "react-icons/fa"; // Asegúrate de tener instalado react-icons
 import { motion } from "framer-motion"; // Asegúrate de tener instalado framer-motion
+import { Howl } from "howler";  // Importar howler.js para los sonidos
 
 interface Ejercicio {
   num1: number;
@@ -19,6 +20,11 @@ const generarEjercicio = (): Ejercicio => {
   const respuestaCorrecta = operador === "+" ? num1 + num2 : num1 - num2;
   return { num1, num2, operador, respuestaCorrecta };
 };
+
+// Cargar los sonidos
+const correcto = new Howl({ src: ["/sounds/correcto.mp3"] }); // Sonido de acierto
+const incorrecto = new Howl({ src: ["/sounds/incorrecto.mp3"] }); // Sonido de error
+const boton = new Howl({ src: ["/sounds/pulsa.mp3"] }); // Sonido al pulsar el botón
 
 const MathExercise = () => {
   const [ejercicioActual, setEjercicioActual] = useState<Ejercicio | null>(null);
@@ -40,6 +46,7 @@ const MathExercise = () => {
 
   const handleInputChange = (valor: string) => {
     setRespuestas((prev) => prev + valor);
+    boton.play(); // Reproducir sonido cuando el usuario pulsa un número
   };
 
   const handleBorrar = () => {
@@ -50,6 +57,7 @@ const MathExercise = () => {
   const handleValidar = () => {
     if (parseInt(respuestas) === ejercicioActual?.respuestaCorrecta) {
       setIsCorrect(true); // Establecer la respuesta como correcta
+      correcto.play(); // Sonido de acierto
       if (currentExercise < 10) {
         // Pausa de 2 segundos antes de cargar el siguiente ejercicio
         setTimeout(() => {
@@ -64,6 +72,7 @@ const MathExercise = () => {
       }
     } else {
       setIsCorrect(false); // Respuesta incorrecta
+      incorrecto.play(); // Sonido de error
     }
   };
 
@@ -157,4 +166,3 @@ const MathExercise = () => {
 };
 
 export default MathExercise;
-
