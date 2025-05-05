@@ -19,9 +19,7 @@
     "incremental": true,
     "baseUrl": ".", // ✅ Añadir baseUrl
     "paths": {
-      "@/*": [
-        "./*"
-      ] // ✅ Apuntar a ./src (o ./app según tu estructura)
+      "@/*": ["./*"] // ✅ Apuntar a ./src (o ./app según tu estructura)
     },
     "plugins": [
       {

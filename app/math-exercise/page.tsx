@@ -1,13 +1,15 @@
 // app/math-exercise.js
 import MathExercise from '../components/MathExercise'; // Importar el componente
-
+import Layout from '../components/Layout';
 export default function MathExercisePage() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-extrabold text-blue-600 mb-3">Ejercicio de Sumas y Restas</h1>
-        <MathExercise />  {/* El componente que ya creamos */}
-      </div>
+    <Layout>
+    {/* Contenido específico del ejercicio aquí */}
+    <div className="text-center space-y-8">
+      <h2 className="text-4xl font-bold text-gray-800">Título del Ejercicio</h2>
+      <p className="text-2xl text-gray-600">Instrucciones del ejercicio...</p>
+      <MathExercise /> {/* Componentes interactivos del ejercicio */}
     </div>
+  </Layout>
   );
 }
