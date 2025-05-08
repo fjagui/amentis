@@ -1,3 +1,7 @@
+VERSIÓN 1 DE AMENTIS
+COPIA DE SEGURIDAD
+NO DESPLEGAR, NO ESTÁ EN LOCAL, SE UTILIZA PARA TENER UNA VERSIÓN QUE QUIERO CONSERVAR PORQUE EN EL DESPLIGUE FUNCIONO CORRECTAMENTE.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
