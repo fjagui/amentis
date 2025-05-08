@@ -28,3 +28,31 @@ body {
 .boton-teclado {
   @apply p-6 text-3xl font-bold text-white rounded-lg shadow-md transition hover:scale-105 flex justify-center items-center;
 }
+
+/* Estilos base para cada paso */
+.step-container {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Teclado numérico */
+.numeric-keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
