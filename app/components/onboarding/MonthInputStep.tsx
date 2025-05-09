@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { ButtonWithSound } from '../ButtonWithSound'; // Importa el nuevo componente
 
 const months = [
   'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
@@ -24,24 +25,24 @@ export default function MonthStep({
         Selecciona el mes:
       </h2>
 
-      {/* Input + Botón de validación (mismo estilo que otros pasos) */}
+      {/* Input + Botón de validación */}
       <div className="flex gap-3 items-center">
         <div className="flex-1 p-4 text-2xl border-2 border-blue-200 rounded-lg bg-white min-h-[60px]">
           {selectedMonth ? months[parseInt(selectedMonth) - 1] : '--'}
         </div>
-        <button
+        <ButtonWithSound
           onClick={() => onNext(selectedMonth)}
           disabled={!selectedMonth}
           className="p-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
         >
           <FaCheck size={24} />
-        </button>
+        </ButtonWithSound>
       </div>
 
-      {/* Teclado de meses */}
+      {/* Teclado de meses con ButtonWithSound */}
       <div className="grid grid-cols-3 gap-3 pt-4">
         {months.map((month, index) => (
-          <button
+          <ButtonWithSound
             key={month}
             onClick={() => setSelectedMonth((index + 1).toString())}
             className={`p-4 text-xl text-center rounded-lg transition ${
@@ -51,17 +52,17 @@ export default function MonthStep({
             }`}
           >
             {month}
-          </button>
+          </ButtonWithSound>
         ))}
       </div>
 
-      {/* Botón Atrás */}
-      <button
+      {/* Botón Atrás con sonido */}
+      <ButtonWithSound
         onClick={onBack}
         className="mt-6 p-3 bg-gray-200 rounded-lg w-full"
       >
         Volver
-      </button>
+      </ButtonWithSound>
     </div>
   );
 }

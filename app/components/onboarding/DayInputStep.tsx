@@ -18,7 +18,7 @@ export default function DayInputStep({
     if (key === 'BACKSPACE') {
       setDay(prev => prev.slice(0, -1));
     } else {
-      setDay(prev => (prev + key).slice(0, 2)); // Limitar a 2 dígitos
+      setDay(prev => (prev + key).slice(0, 4)); // Limitar a 2 dígitos
     }
   };
 
