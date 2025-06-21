@@ -1,20 +1,21 @@
+// app/context/UserContext.tsx
 'use client';
 import { createContext, useContext, useState } from 'react';
+import { UserData } from '../types/user';
 
-type UserData = {
-  name: string;
-  birthDate: string | null;
-  currentDate: string | null;
+type UserContextType = {
+  userData: UserData;
+  setUserData: React.Dispatch<React.SetStateAction<UserData>>;
 };
 
-const UserContext = createContext<{
-    userData: UserData;
-    setUserData: React.Dispatch<React.SetStateAction<UserData>>;
-  } | null>(null);
+const UserContext = createContext<UserContextType>({} as UserContextType);
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [userData, setUserData] = useState<UserData>({
     name: '',
+    day: '',
+    month: '',
+    year: '',
     birthDate: null,
     currentDate: null
   });
@@ -26,10 +27,4 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function useUserData() {
-  const context = useContext(UserContext);
-  if (!context) {
-    throw new Error('useUserData must be used within a UserProvider');
-  }
-  return context;
-}
+export const useUserData = () => useContext(UserContext);

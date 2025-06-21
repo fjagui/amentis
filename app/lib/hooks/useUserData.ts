@@ -1,40 +1,34 @@
 'use client';
 import { useUserData } from '../context/UserContext';
-import { UserData } from '../types/user'; // Asegúrate de tener esta interfaz
+import { UserData } from '../types/user';
 
 export function useUserDataActions() {
   const { userData, setUserData } = useUserData();
 
-  // Tipado explícito para las funciones de actualización
-  const updateName = (name: string) => {
-    setUserData((prev: UserData) => ({ ...prev, name }));
-  };
-
-  const updateBirthDate = (date: string) => {
-    setUserData((prev: UserData) => ({ ...prev, birthDate: date }));
-  };
-
-  const updateCurrentDate = (date: string) => {
-    setUserData((prev: UserData) => ({ ...prev, currentDate: date }));
-  };
-
-  const getUserData = () => userData;
-  // Versión alternativa con validación de tipos más estricta:
-  const safeUpdateUserData = <K extends keyof UserData>(
-    key: K,
-    value: UserData[K]
-  ) => {
+  // Versión type-safe para actualizaciones
+  const updateUserData = <K extends keyof UserData>(field: K, value: UserData[K]) => {
     setUserData(prev => ({
       ...prev,
-      [key]: value
+      [field]: value
     }));
   };
 
+  // Métodos específicos para mejor semántica
+  const updateName = (name: string) => updateUserData('name', name);
+  const updateBirthDate = (date: string) => updateUserData('birthDate', date);
+  const updateCurrentDate = (date: string) => updateUserData('currentDate', date);
+  const updateDay = (day: string) => updateUserData('day', day);
+  const updateMonth = (month: string) => updateUserData('month', month);
+  const updateYear = (year: string) => updateUserData('year', year);
+
   return {
-    getUserData,
+    userData,
     updateName,
     updateBirthDate,
     updateCurrentDate,
-    safeUpdateUserData // Método alternativo type-safe
+    updateDay,
+    updateMonth,
+    updateYear,
+    updateUserData // Método genérico type-safe
   };
 }
