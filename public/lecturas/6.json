@@ -1,0 +1,262 @@
+[
+  {
+   
+    "titulo": "El sueño de María",
+    "texto": "María siempre soñó con leer libros.<br/> De niña, trabajaba en el campo y no pudo ir a la escuela.\n Ahora, a sus 50 años, decidió aprender.\n Cada tarde, iba a la biblioteca de su barrio. \nAllí, la maestra Laura le enseñaba con paciencia. \nAl principio, María leía muy despacio. Se detenía en cada letra, en cada palabra. Pero no se rindió. \nDespués de muchos meses, leyó su primer libro sola: Pinocho. Lloró de alegría. \nAhora, María dice: Nunca es tarde para aprender.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Cómo se llama la mujer que aprende a leer?",
+        "opciones": ["Laura", "Josefa", "María"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Dónde iba María cada tarde?",
+        "opciones": ["A una tienda", "A una cafetería", "A la biblioteca"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Quién ayudaba a María a aprender a leer?",
+        "opciones": ["Josefa", "Elena", "Laura"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué libro leyó sola por primera vez?",
+        "opciones": ["Cien Años de Soledad", "El abuelo", "Pinocho"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Dónde trabajaba María?",
+        "opciones": ["En una tienda", "En una cafetería", "En el campo"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+  
+    "titulo": "El taller de carpintería de Don Luis",
+    "texto": "Don Luis siempre admiró los muebles finos.<br/> De joven, trabajó en una fábrica y no tuvo tiempo para aprender un oficio.<br/> Ahora, a sus 60 años, se inscribió en un taller de carpintería del centro comunitario.<br/> Tres veces por semana, después del almuerzo, caminaba hasta el taller.<br/> Allí, el profesor Carlos le enseñaba con dedicación.<br/> Al principio, Luis confundía las herramientas. No sabía usar el martillo ni medir la madera.<br/> Pero cada error era una lección. Practicaba cortes rectos durante horas.<br/> Después de seis meses, construyó su primer banco de madera. Lo pintó de azul y lo regaló a su nieta.<br/> Hoy, Luis tiene su propio taller donde enseña a otros adultos. Su frase favorita es: \"Las manos saben, pero primero deben aprender\".",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué oficio aprendió Don Luis?",
+        "opciones": ["Panadería", "Carpintería", "Costura"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Dónde tomaba las clases?",
+        "opciones": ["En un parque", "En el centro comunitario", "En su casa"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Cuál fue su primera obra terminada?",
+        "opciones": ["Una mesa", "Un banco azul", "Un estante"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué hace Luis ahora?",
+        "opciones": ["Vende herramientas", "Enseña a otros adultos", "Trabaja en una fábrica"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cuál es su lema?",
+        "opciones": [
+          "\"La prisa es enemiga de la perfección\"",
+          "\"Las manos saben, pero primero deben aprender\"",
+          "\"Nunca dejes para mañana lo que puedas hacer hoy\""
+        ],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+   
+    "titulo": "El sombrero de Juan",
+    "texto": "Juan vive en Priego de Córdoba.<br/> Tiene 65 años.\nTodas las mañanas va a pasear.\nSe pone su sombrero marrón.\nLe gusta caminar por las calles del barrio antiguo.\n\nUn día, el viento sopló muy fuerte.\n¡Su sombrero salió volando!\nJuan corrió tras él.\nEl sombrero pasó por la Fuente del Rey.\nSaltó cerca del agua, pero no cayó.\n\nUna niña vio el sombrero y lo atrapó.\n—Señor, ¿es suyo? —preguntó.\n—¡Sí, muchas gracias! —dijo Juan, sonriendo.\n\nDesde ese día, Juan ata su sombrero con una cinta.\nY cada vez que pasa por la fuente, recuerda ese momento.\nJuan dice:\n—Siempre puede pasar algo bueno en un paseo.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Cómo se llama el hombre del cuento?",
+        "opciones": ["Luis", "Juan", "Pedro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Dónde vive Juan?",
+        "opciones": ["En Sevilla", "En Priego de Córdoba", "En Córdoba"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué se voló con el viento?",
+        "opciones": ["Un sombrero", "Una bufanda", "Un periódico"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Quién atrapó el sombrero?",
+        "opciones": ["Un niño", "Una niña", "Un policía"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hace Juan con su sombrero ahora?",
+        "opciones": ["Lo guarda en casa", "No lo usa más", "Lo ata con una cinta"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "titulo": "La Feria de los Recuerdos",
+    "texto": "Era el segundo día de la feria.\nLas calles de Priego brillaban con luces de colores.\nAna, una mujer del pueblo, paseaba con su nieto Pablo.\n\nEl aire olía a flores, a jamón y a música.\nPablo señaló un puesto de juguetes antiguos.\nEntre ellos, había una pequeña carreta de madera.\n\nAna se emocionó al verla.\n—¡Es igual a la que tenía tu abuelo!— dijo con lágrimas en los ojos.\nLa compró al instante.\n\nEsa noche, en una caseta, comieron tortilla de patatas.\nAna le explicó a Pablo:\n—Antes, la gente disfrutaba con cosas sencillas como esta carreta.\n\nPablo la guardó como un tesoro.\n—La traeré a la feria todos los años— prometió.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué día de la feria era?",
+        "opciones": ["El primero", "El segundo", "El último"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué olía en el aire?",
+        "opciones": ["Pan recién hecho", "Flores y jamón", "Mar"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Por qué Ana reconoció la carreta?",
+        "opciones": ["Era de un vecino", "Era igual a una de su familia", "Pablo se lo dijo"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué comieron en la caseta?",
+        "opciones": ["Gazpacho", "Tortilla de patatas", "Churros"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué prometió Pablo?",
+        "opciones": ["Comprar más juguetes", "Traer la carreta cada año", "Aprender a tocarla"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "titulo": "El Secreto de la Abuela",
+    "texto": "Elena era una cocinera del pequeño pueblo de Zuheros, en Córdoba.\nUn día, encontró un viejo cuaderno de recetas de su abuela.\nEntre sus páginas, descubrió una receta incompleta de gazpacho.\n\nFaltaban ingredientes y pasos, pero Elena reconocía la letra temblorosa de su abuela.\nDecidió completarla usando sus recuerdos.\n—Tenía pepino… ¿Y vinagre?— murmuraba frente a los fogones.\n\nPreguntó a los vecinos más ancianos del pueblo.\nDoña Carmen le dijo: \"Tu abuela le ponía un poco de miel\".\nDon José añadió: \"Y almendras picadas\".\n\nTras varios intentos, Elena logró recrear el gazpacho.\nAl probarlo, sintió que su abuela estaba allí, guiándola.\n—¡Era esto!— sonrió, emocionada.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué encontró Elena en el cuaderno?",
+        "opciones": ["Una receta de tortilla", "Una receta incompleta de gazpacho", "Un mapa del pueblo"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿De quién era el cuaderno de recetas?",
+        "opciones": ["De su madre", "De su abuela", "De una vecina"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué le dijo Doña Carmen sobre la receta?",
+        "opciones": ["Que llevaba miel", "Que llevaba pan", "Que llevaba huevo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo se sintió Elena al probar el gazpacho?",
+        "opciones": ["Triste", "Enojada", "Emocionada"],
+        "respuestaCorrecta": 3
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué ingrediente extra añadió Don José?",
+        "opciones": ["Aceitunas", "Almendras picadas", "Tomate"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "titulo": "El Detective de los Pequeños Misterios",
+    "texto": "En Córdoba capital, había un detective muy peculiar: Don Rafael.\nNo resolvía crímenes, sino misterios cotidianos.\n\n—¿Quién se comió mi rosquilla? —preguntó un niño en el parque.\n—¿Dónde está el arete perdido de la señora Luisa? —urgía en el mercado.\n\nDon Rafael usaba solo tres herramientas:\n1. Una lupa de juguete (pero él creía que era mágica).\n2. Un cuaderno de dibujos para tomar notas.\n3. Su intuición de abuelo.\n\nUn día, el panadero del barrio gritó:\n—¡Alguien robó mi masa madre! ¡Llevaba 20 años cuidándola!\n\nDon Rafael investigó entre harina y hornos calientes.\nDescubrió que... ¡había sido un gato callejero que arrastró el tarro!\n—Los culpables siempre dejan huellas —dijo, señalando patitas blancas de harina.\n\nAl final, el panadero le regaló un bizcocho.\n—Eres el mejor detective de Córdoba —le dijo entre risas.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué tipo de misterios resolvía Don Rafael?",
+        "opciones": ["Crímenes graves", "Misterios cotidianos", "Robos de joyas"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué herramienta creía Don Rafael que era mágica?",
+        "opciones": ["Su cuaderno", "Su lupa de juguete", "Su bastón"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué robaron del panadero?",
+        "opciones": ["Un bizcocho", "Su masa madre", "Dinero"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Quién fue el culpable del robo?",
+        "opciones": ["Un niño del barrio", "Un gato callejero", "La señora Luisa"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué le regaló el panadero a Don Rafael?",
+        "opciones": ["Pan", "Un bizcocho", "Harina"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "titulo": "El Secreto de la Abuela",
+    "texto": "Elena era una cocinera del pequeño pueblo de Zuheros, en Córdoba.\nUn día, encontró un viejo cuaderno de recetas de su abuela.\nEntre sus páginas, descubrió una receta incompleta de gazpacho.\n\nFaltaban ingredientes y pasos, pero Elena reconocía la letra temblorosa de su abuela.\nDecidió completarla usando sus recuerdos.\n—Tenía pepino… ¿Y vinagre?— murmuraba frente a los fogones.\n\nPreguntó a los vecinos más ancianos del pueblo.\nDoña Carmen le dijo: \"Tu abuela le ponía un poco de miel\".\nDon José añadió: \"Y almendras picadas\".\n\nTras varios intentos, Elena logró recrear el gazpacho.\nAl probarlo, sintió que su abuela estaba allí, guiándola.\n—¡Era esto!— sonrió, emocionada.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué encontró Elena en el cuaderno?",
+        "opciones": ["Una receta de tortilla", "Una receta incompleta de gazpacho", "Un mapa del pueblo"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿De quién era el cuaderno de recetas?",
+        "opciones": ["De su madre", "De su abuela", "De una vecina"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué le dijo Doña Carmen sobre la receta?",
+        "opciones": ["Que llevaba miel", "Que llevaba pan", "Que llevaba huevo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo se sintió Elena al probar el gazpacho?",
+        "opciones": ["Triste", "Enojada", "Emocionada"],
+        "respuestaCorrecta": 3
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué ingrediente extra añadió Don José?",
+        "opciones": ["Aceitunas", "Almendras picadas", "Tomate"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  }
+
+]

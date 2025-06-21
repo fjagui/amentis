@@ -20,6 +20,21 @@ export default function ExerciseManager() {
 
   const exercises: ExerciseComponent[] = [
     { 
+      title:'Lectura',
+      component: <ReadingComprehension 
+      
+        onComplete={() => {
+           setProgress(75);
+           setExerciseCompleted(true);
+           setShowTransition(true);
+          
+        }} 
+      
+      />, 
+      duration: 120 
+    },
+
+    { 
       title: 'Recuerda la secuencia',
       component: <RecuerdaSecuencia 
       onComplete={() => {
@@ -45,20 +60,7 @@ export default function ExerciseManager() {
       />, 
       duration: 120 
     },
-    { 
-      title:'Lectura',
-      component: <ReadingComprehension 
-      
-        onComplete={() => {
-           setProgress(75);
-           setExerciseCompleted(true);
-           setShowTransition(true);
-          
-        }} 
-      
-      />, 
-      duration: 120 
-    },
+   
     
   ];
 

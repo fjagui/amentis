@@ -1,75 +1,78 @@
-"use client";  // Asegúrate de que este componente es de cliente
-
-import { useState, useEffect, useRef } from "react";
-import { FaCheck } from "react-icons/fa"; // Asegúrate de tener instalado react-icons
-import { motion } from "framer-motion"; // Asegúrate de tener instalado framer-motion
-import { Howl } from "howler";  // Importar howler.js para los sonidos
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Howl } from "howler";
 
 // Cargar los sonidos
-const correcto = new Howl({ src: ["/sounds/correcto.mp3"] }); // Sonido de acierto
-const incorrecto = new Howl({ src: ["/sounds/incorrecto.mp3"] }); // Sonido de error
-const boton = new Howl({ src: ["/sounds/pulsa.mp3"] }); // Sonido al pulsar el botón
+const correcto = new Howl({ src: ["/sounds/correcto.mp3"] });
+const incorrecto = new Howl({ src: ["/sounds/incorrecto.mp3"] });
 
-const ReadingComprehension = ({ onComplete }: { onComplete: () => void; }) =>  {
-  const [gameCompleted, setGameCompleted] = useState(false);
-  const [ejercicioActual, setEjercicioActual] = useState<any>(null);
+const ReadingComprehension = ({ onComplete }: { onComplete: () => void }) => {
+  const [historiaActual, setHistoriaActual] = useState<any>(null);
   const [respuestasUsuario, setRespuestasUsuario] = useState<any[]>([]);
   const [currentPreguntaIndex, setCurrentPreguntaIndex] = useState<number>(0);
   const [feedback, setFeedback] = useState<string | null>(null);
-  const [leido, setLeido] = useState<boolean>(false); // Para saber si el usuario ha leído el texto
-  const [preguntaActual, setPreguntaActual] = useState<number>(1); // Indicador de la pregunta actual
-  const [respuestasCorrectas, setRespuestasCorrectas] = useState<number>(0); // Contador de respuestas correctas
-  const [completado, setCompletado] = useState<boolean>(false); // Para saber si el ejercicio ha terminado
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const [leido, setLeido] = useState<boolean>(false);
+  const [preguntaActual, setPreguntaActual] = useState<number>(1);
+  const [respuestasCorrectas, setRespuestasCorrectas] = useState<number>(0);
+  const [completado, setCompletado] = useState<boolean>(false);
 
-  // Cargar los ejercicios de la API o el archivo JSON
+  // Cargar y seleccionar historia basada en la fecha
   useEffect(() => {
-    fetch("/text.json") // Ruta al archivo JSON con los textos
+    const mesActual = new Date().getMonth() + 1; // 1-12
+    fetch('lecturas/'+mesActual+'.json')
       .then((response) => response.json())
-      .then((data) => setEjercicioActual(data[0])); // Usamos el primer ejercicio del JSON
+      .then((data) => {
+        const hoy = new Date();
+        const diaDelMes = hoy.getDate();
+        
+        // Seleccionar historia basada en el día del mes
+        const historiaIndex = diaDelMes % data.length;
+        
+        //setHistoriaActual(data[historiaIndex]);
+        setHistoriaActual(data[3]);
+
+      });
   }, []);
 
-  if (!ejercicioActual) {
-    return <div className="text-center p-10">Cargando ejercicio...</div>;
+  if (!historiaActual) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-2xl">Cargando historia del día...</div>
+      </div>
+    );
   }
 
   const handleRespuesta = (respuestaSeleccionada: number) => {
-    const pregunta = ejercicioActual.preguntas[currentPreguntaIndex];
+    const pregunta = historiaActual.preguntas[currentPreguntaIndex];
     const esCorrecta = pregunta.respuestaCorrecta === respuestaSeleccionada;
 
     setRespuestasUsuario((prev) => [...prev, { preguntaId: pregunta.id, esCorrecta }]);
 
     if (esCorrecta) {
       setFeedback("¡Respuesta correcta!");
-      correcto.play(); // Sonido de acierto
-      setRespuestasCorrectas(respuestasCorrectas + 1); // Incrementar el contador de respuestas correctas
+      correcto.play();
+      setRespuestasCorrectas(respuestasCorrectas + 1);
     } else {
       setFeedback("Respuesta incorrecta. Intenta de nuevo.");
-      incorrecto.play(); // Sonido de error
+      incorrecto.play();
     }
 
-    // Avanzar a la siguiente pregunta
-    if (currentPreguntaIndex < ejercicioActual.preguntas.length - 1) {
+    if (currentPreguntaIndex < historiaActual.preguntas.length - 1) {
       setTimeout(() => {
-        setPreguntaActual((prev) => prev + 1); // Aumentar el indicador de pregunta
+        setPreguntaActual((prev) => prev + 1);
         setCurrentPreguntaIndex((prev) => prev + 1);
-        setFeedback(null); // Resetear el feedback
-      }, 1500); // Pausa de 1.5 segundos antes de pasar a la siguiente pregunta
+        setFeedback(null);
+      }, 1500);
     } else {
-      // Si hemos terminado todas las preguntas, mostrar mensaje de finalización
-      setCompletado(true); // Marcar el ejercicio como completado
-      return;
+      setCompletado(true);
     }
   };
 
   const handlePasarPreguntas = () => {
-    setLeido(true); // Marcar que el usuario ha leído el texto y puede pasar a las preguntas
+    setLeido(true);
   };
 
-  // Reemplazar los saltos de línea con <br /> en el texto
-  const textoConSaltos = ejercicioActual.texto.replace(/\n/g, "<br />");
-
-  // Reiniciar todo el ejercicio
   const handleReintentar = () => {
     setLeido(false);
     setRespuestasUsuario([]);
@@ -77,84 +80,118 @@ const ReadingComprehension = ({ onComplete }: { onComplete: () => void; }) =>  {
     setCurrentPreguntaIndex(0);
     setRespuestasCorrectas(0);
     setFeedback(null);
-    setCompletado(false); // Resetear estado de completado
+    setCompletado(false);
   };
 
+  const textoConSaltos = historiaActual.texto.replace(/\n/g, "<br />");
+
   return (
-    <div className="flex flex-col items-center justify-top min-h-screen bg-gray-100 p-4">
-      {/* Texto para lectura con marco y estilos mejorados */}
+    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-4 pt-10">
       {!leido && (
-        <div className="w-full max-w-3xl p-8 mb-6 rounded-xl border-4 border-gray-300 bg-white shadow-lg">
-          <h2 className="text-4xl font-bold text-gray-700 mb-4 text-center">{ejercicioActual.titulo}</h2>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="w-full max-w-3xl p-8 mb-6 rounded-xl border-4 border-gray-300 bg-white shadow-lg"
+        >
+          <div className="text-sm text-gray-500 mb-2">
+            Historia del día {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
+          </div>
+          <h2 className="text-3xl font-bold text-gray-700 mb-4">{historiaActual.titulo}</h2>
           <div
             className="text-xl text-gray-800 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: textoConSaltos }}
           />
-        </div>
+        </motion.div>
       )}
 
-      {/* Botón para pasar a las preguntas */}
       {!leido && (
         <motion.button
           onClick={handlePasarPreguntas}
-          className="mt-4 px-8 py-4 bg-blue-600 text-white font-bold text-xl rounded-2xl shadow-md hover:bg-blue-700 transition"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          className="mt-4 px-8 py-3 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-md hover:bg-blue-700 transition"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          Leer todo, ahora responder
+          Continuar a las preguntas
         </motion.button>
       )}
 
-      {/* Mostrar las preguntas una vez que se haya leído el texto */}
-      {leido && (
-        <div className="w-full max-w-3xl p-8 mb-6 rounded-xl border-4 border-gray-300 bg-white shadow-lg">
-          {/* Indicador de la pregunta */}
-          <div className="text-xl font-bold text-gray-700 mb-4">
-            Pregunta {preguntaActual} de {ejercicioActual.preguntas.length}
+      {leido && !completado && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="w-full max-w-3xl p-6 mb-6 rounded-xl border-4 border-gray-300 bg-white shadow-lg"
+        >
+          <div className="text-lg font-semibold text-gray-600 mb-3">
+            Pregunta {preguntaActual} de {historiaActual.preguntas.length}
           </div>
 
-          {/* Mostrar la pregunta actual */}
           <div className="mb-6">
-            <div className="text-2xl font-semibold">{ejercicioActual.preguntas[currentPreguntaIndex].pregunta}</div>
-            <div className="space-y-6 mt-4">
-              {ejercicioActual.preguntas[currentPreguntaIndex].opciones.map((opcion: string, i: number) => (
-                <div
-                  key={i}
-                  className="p-6 bg-blue-500 text-white text-2xl font-semibold rounded-lg shadow-md hover:bg-blue-600 transition"
-                >
-                  <button onClick={() => handleRespuesta(i)} className="w-full">
+            <div className="text-xl font-semibold mb-4">
+              {historiaActual.preguntas[currentPreguntaIndex].pregunta}
+            </div>
+            <div className="space-y-3">
+              {historiaActual.preguntas[currentPreguntaIndex].opciones.map(
+                (opcion: string, i: number) => (
+                  <motion.button
+                    key={i}
+                    onClick={() => handleRespuesta(i)}
+                    className="w-full p-4 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow hover:bg-blue-600 transition text-left"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
                     {opcion}
-                  </button>
-                </div>
-              ))}
+                  </motion.button>
+                )
+              )}
             </div>
           </div>
 
-          {/* Feedback sobre la respuesta */}
           {feedback && (
-            <div className={`mt-6 text-2xl font-bold ${feedback.includes("incorrecta") ? "text-red-500" : "text-green-500"}`}>
+            <div className={`mt-4 text-lg font-bold ${
+              feedback.includes("incorrecta") ? "text-red-500" : "text-green-500"
+            }`}>
               {feedback}
             </div>
           )}
-        </div>
+        </motion.div>
       )}
 
-      {/* Botón para volver a intentar */}
       {completado && (
-        <motion.button
-          onClick={handleReintentar}
-          className="mt-6 px-8 py-4 bg-gray-600 text-white font-bold text-xl rounded-2xl shadow-md hover:bg-gray-700 transition"
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          className="text-center"
         >
-          Volver a intentar
-        </motion.button>
+          <div className="text-2xl font-bold text-green-600 mb-4">
+            ¡Ejercicio completado!
+          </div>
+          <div className="text-xl mb-6">
+            Puntuación: {respuestasCorrectas} de {historiaActual.preguntas.length}
+          </div>
+          
+          <div className="flex gap-4 justify-center">
+            <motion.button
+              onClick={handleReintentar}
+              className="px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg shadow hover:bg-gray-700 transition"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Repetir ejercicio
+            </motion.button>
+            
+            <motion.button
+              onClick={onComplete}
+              className="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Finalizar
+            </motion.button>
+          </div>
+        </motion.div>
       )}
     </div>
   );
 };
 
 export default ReadingComprehension;
-
