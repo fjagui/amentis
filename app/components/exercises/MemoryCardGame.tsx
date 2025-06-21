@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Howl } from "howler";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Sonidos para el juego (puedes reutilizar los mismos o añadir nuevos)
+// Sonidos para el juego
 const sonidoAcierto = new Howl({ src: ["/sounds/correcto.mp3"] });
 const sonidoError = new Howl({ src: ["/sounds/incorrecto.mp3"] });
 const sonidoVoltear = new Howl({ src: ["/sounds/pulsa.mp3"] });
@@ -15,6 +15,11 @@ type Card = {
   isMatched: boolean;
 };
 
+type EmojiSet = {
+  name: string;
+  emojis: string[];
+};
+
 const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
   const [cards, setCards] = useState<Card[]>([]);
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
@@ -23,8 +28,28 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
   const [feedback, setFeedback] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [pairsFound, setPairsFound] = useState(0);
+  const [currentSet, setCurrentSet] = useState<EmojiSet | null>(null);
   
-  const emojis = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼"];
+  // Definición de los 4 sets de emojis
+  const emojiSets: EmojiSet[] = [
+    {
+      name: "Comida",
+      emojis: ["🍎", "🍕", "🍦", "🍔", "🍓", "🍩", "🍉", "🍪"]
+    },
+    {
+      name: "Animales",
+      emojis: ["🐶", "🐱", "🦁", "🐸", "🐵", "🦄", "🐧", "🐙"]
+    },
+    {
+      name: "Corazones",
+      emojis: ["❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍"]
+    },
+    {
+      name: "Pelotas",
+      emojis: ["⚽", "🏀", "🏈", "⚾", "🎾", "🏐", "🏉", "🎱"]
+    }
+  ];
+  
   const totalPairs = 6; // Número de parejas a encontrar
   
   const mensajesAnimaciones = {
@@ -34,13 +59,20 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
     transition: { type: "spring", stiffness: 300, damping: 20 }
   };
 
+  // Seleccionar un set de emojis aleatorio
+  const selectRandomSet = () => {
+    const randomIndex = Math.floor(Math.random() * emojiSets.length);
+    return emojiSets[randomIndex];
+  };
+
   // Inicializar el juego
   const initializeGame = () => {
-    // Crear pares de cartas
-    const emojisToUse = emojis.slice(0, totalPairs);
+    const selectedSet = selectRandomSet();
+    setCurrentSet(selectedSet);
+    
+    const emojisToUse = selectedSet.emojis.slice(0, totalPairs);
     const cardPairs = [...emojisToUse, ...emojisToUse];
     
-    // Barajar las cartas
     const shuffledCards = cardPairs
       .sort(() => Math.random() - 0.5)
       .map((emoji, index) => ({
@@ -54,16 +86,14 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
     setFlippedCards([]);
     setMoves(0);
     setGameComplete(false);
-    setFeedback("¡Encuentra todas las parejas!");
+    setFeedback(`Tema: ${selectedSet.name} - Encuentra las parejas!`);
     setPairsFound(0);
   };
 
-  // Efecto para inicializar el juego al montar el componente
   useEffect(() => {
     initializeGame();
   }, []);
 
-  // Efecto para verificar si el juego está completo
   useEffect(() => {
     if (pairsFound === totalPairs) {
       setGameComplete(true);
@@ -72,15 +102,12 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
     }
   }, [pairsFound, onComplete]);
 
-  // Manejar el clic en una carta
   const handleCardClick = (id: number) => {
-    // No hacer nada si la carta ya está volteada o emparejada, o si ya hay 2 cartas volteadas
     const clickedCard = cards.find(card => card.id === id);
     if (!clickedCard || clickedCard.isFlipped || clickedCard.isMatched || isProcessing || flippedCards.length >= 2) {
       return;
     }
 
-    // Voltear la carta
     sonidoVoltear.play();
     const newCards = cards.map(card =>
       card.id === id ? { ...card, isFlipped: true } : card
@@ -88,7 +115,6 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
     setCards(newCards);
     setFlippedCards([...flippedCards, id]);
 
-    // Si es la segunda carta volteada, verificar si hay pareja
     if (flippedCards.length === 1) {
       setIsProcessing(true);
       setMoves(prev => prev + 1);
@@ -113,7 +139,7 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
           setPairsFound(prev => prev + 1);
         }, 1000);
       } else {
-        // No es pareja
+        // No es pareja - mostrar por más tiempo
         sonidoError.play();
         setFeedback("Inténtalo de nuevo ❌");
         
@@ -149,14 +175,20 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
         ) : null}
       </AnimatePresence>
 
-      <div className="grid grid-cols-4 gap-4 my-8">
+      {currentSet && (
+        <div className="text-xl font-semibold text-gray-700 bg-white px-6 py-2 rounded-full shadow-md mb-4">
+          Tema: {currentSet.name}
+        </div>
+      )}
+
+      <div className="grid grid-cols-4 gap-4 my-4">
         {cards.map((card) => (
           <motion.div
             key={card.id}
             onClick={() => handleCardClick(card.id)}
-            className={`w-24 h-24 flex items-center justify-center text-4xl rounded-xl cursor-pointer shadow-lg transition-all duration-300 ${
+            className={`w-24 h-24 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ${
               card.isFlipped || card.isMatched 
-                ? "bg-white transform rotate-y-180" 
+                ? "bg-white" 
                 : "bg-blue-500 hover:bg-blue-600"
             }`}
             style={{
@@ -168,32 +200,39 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
             whileHover={{ scale: card.isFlipped || card.isMatched ? 1 : 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {(card.isFlipped || card.isMatched) && (
-              <motion.span 
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                {card.value}
-              </motion.span>
+            {(card.isFlipped || card.isMatched) ? (
+              <div className="w-full h-full flex items-center justify-center">
+                <motion.span 
+                  className="text-6xl" // Tamaño aumentado del emoji
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {card.value}
+                </motion.span>
+              </div>
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-4xl text-transparent">?</span>
+              </div>
             )}
           </motion.div>
         ))}
       </div>
 
-      <div className="flex flex-col items-center space-y-8">
+      <div className="flex flex-col items-center space-y-6">
         <div className="text-2xl font-semibold text-gray-700 bg-white px-6 py-3 rounded-full shadow-md">
           Movimientos: {moves} | Parejas: {pairsFound}/{totalPairs}
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex gap-6">
           <motion.button
             onClick={initializeGame}
             className="px-8 py-4 bg-blue-600 text-white text-xl rounded-xl font-bold shadow-lg hover:bg-blue-700 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Reiniciar Juego
+            Nuevo Juego
           </motion.button>
         </div>
       </div>
