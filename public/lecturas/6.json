@@ -1,5 +1,4 @@
-{
-  "historias": [
+[
     {
       "titulo": "La Aventura del Ambulatorio",
       "texto": "Marta llegó al ambulatorio a las 8:00 en punto.\nLlevaba dolor de garganta y esperaba ser la primera.\n\nPero la sala estaba llena:\n- Un niño con un tobillo hinchado de jugar al fútbol.\n- Una abuela que roncaba suavemente en su silla.\n- Un hombre con un loro en el hombro (que repetía: \"¡Ay, qué dolor!\").\n\nCuando por fin la llamaron, la doctora le dijo:\n—Es solo un resfriado. Bebe agua con miel.\nMarta suspiró. ¡Había esperado dos horas para eso!\n\nAl salir, el loro le gritó:\n—¡Cuídate, guapa!\nY todos se rieron.",
@@ -109,4 +108,3 @@
       ]
     }
   ]
-}
