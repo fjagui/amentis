@@ -5,6 +5,7 @@ import MathExercise from './MathExercise';
 import ReadingComprehension from './ReadingComprehension';
 import Layout from '../Layout'; // Asegúrate de que la ruta sea correcta
 import { ExerciseTransition } from './ExerciseTransition';
+import MemoryCardGame from './MemoryCardGame';
 
 type ExerciseComponent = {
   title: string;
@@ -19,6 +20,20 @@ export default function ExerciseManager() {
   const [showTransition, setShowTransition] = useState(false);
 
   const exercises: ExerciseComponent[] = [
+    { 
+      title:'Memoria',
+      component: <MemoryCardGame 
+      
+        onComplete={() => {
+           setProgress(75);
+           setExerciseCompleted(true);
+           setShowTransition(true);
+          
+        }} 
+      
+      />, 
+      duration: 120 
+    },
     { 
       title:'Lectura',
       component: <ReadingComprehension 
