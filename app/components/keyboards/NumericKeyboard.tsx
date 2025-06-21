@@ -8,6 +8,7 @@ export const NumericKeyboard = ({
   onKeyPress: (num: string) => void;
   showBackspace?: boolean;
 }) => {
+  console.log('[DEBUG] Props en NumericKeyboard:', { onKeyPress }); // Verifica aquí
   return (
     <KeyboardWrapper onKeyPress={onKeyPress} variant="numeric">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num) => (

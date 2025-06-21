@@ -9,7 +9,7 @@ const sonidoVerde = new Howl({ src: ["/sounds/green.mp3"] });
 const sonidoAzul = new Howl({ src: ["/sounds/blue.mp3"] });
 const sonidoAmarillo = new Howl({ src: ["/sounds/yellow.mp3"] });
 
-const RecuerdaSecuencia = () => {
+const RecuerdaSecuencia = ({ onComplete}: { onComplete: () => void; }) => {
   const colores = ["red", "green", "blue", "yellow"];
   const [secuencia, setSecuencia] = useState<string[]>([]);
   const [jugadorSecuencia, setJugadorSecuencia] = useState<string[]>([]);
@@ -22,8 +22,17 @@ const RecuerdaSecuencia = () => {
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
     transition: { type: "spring", stiffness: 300, damping: 20 }  };
+  
+    useEffect(() => {
+      if (nivel === 5 && jugando) {
+        setFeedback("¡Victoria final! 🎉");
+        setJugando(false);
+        onComplete(); // Notificar al padre que se completó
+      }
+    }, [nivel, jugando, onComplete]);
+
   const generarSecuencia = () => {
-    const nuevaSecuencia = Array.from({ length: nivel }, () => 
+      const nuevaSecuencia = Array.from({ length: nivel }, () => 
       colores[Math.floor(Math.random() * colores.length)]
     );
     setSecuencia(nuevaSecuencia);
@@ -110,6 +119,7 @@ const RecuerdaSecuencia = () => {
       setFeedback(null);
     }, 1000); // Esperar a que termine la animación
   };
+ 
 
   useEffect(() => {
     if (jugando && nivel > 1) {
@@ -129,32 +139,33 @@ const RecuerdaSecuencia = () => {
   }, [secuencia]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8 space-y-10">
-      <motion.h1 
-        className="text-5xl font-bold text-gray-800 mb-4 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        Memoria de Secuencias
-      </motion.h1>
-
-      
-      <AnimatePresence mode="wait">
-        {feedback && (
-          <motion.div
-            key={feedback}
-            {...mensajesAnimaciones}
-            className={`text-3xl font-bold text-center ${
-              feedback.includes("❌") ? "text-red-600" :
-              feedback.includes("¡Victoria") ? "text-purple-600" :
-              "text-gray-700"
-            }`}
-          >
-            {feedback}
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 p-8 space-y-6">
+     
+     <AnimatePresence mode="wait">
+      {!jugando && !feedback ? (
+        <motion.div
+          key="inicio"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          className="text-3xl font-bold text-center mb-4 text-blue-600"
+        >
+          Presiona "Nuevo Juego" para empezar
+        </motion.div>
+      ) : feedback ? (
+        <motion.div
+          key={feedback}
+          {...mensajesAnimaciones}
+          className={`text-3xl font-bold text-center mb-4 ${
+            feedback.includes("❌") ? "text-red-600" :
+            feedback.includes("¡Victoria") ? "text-purple-600" :
+            "text-gray-700"
+          }`}
+        >
+          {feedback}
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
       <div className="flex gap-10 my-12">
         {colores.map((color) => (
           <motion.div
@@ -185,17 +196,10 @@ const RecuerdaSecuencia = () => {
             whileTap={{ scale: 0.95 }}
             disabled={jugando}
           >
-            {jugando ? "En progreso..." : "Nuevo Juego"}
+            {jugando ? "En progreso..." : "Jugar"}
           </motion.button>
 
-          <motion.button
-            onClick={reiniciarJuego}
-            className="px-12 py-6 bg-red-600 text-white text-2xl rounded-2xl font-bold shadow-lg hover:bg-red-700 transition-colors"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Reiniciar
-          </motion.button>
+        
         </div>
       </div>
     </div>

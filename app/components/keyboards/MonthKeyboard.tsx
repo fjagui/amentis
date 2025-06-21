@@ -1,24 +1,29 @@
-// components/MonthKeyboard.tsx
 'use client';
-import { ButtonWithSound } from '../ButtonWithSound';
+import { KeyboardWrapper } from './KeyboardWrapper';
 
 const months = [
-  'Enera', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+  'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
   'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
 ];
 
 export const MonthKeyboard = ({ onMonthSelect }: { onMonthSelect: (monthNumber: string) => void }) => {
   return (
-    <div className="grid grid-cols-3 gap-3 p-4 bg-gray-50 rounded-lg">
+    <KeyboardWrapper 
+      variant="month"
+      onKeyPress={(value) => {
+        console.log('Valor recibido en KeyboardWrapper:', value); // Debug
+        onMonthSelect(value);
+      }}
+    >
       {months.map((month, index) => (
-        <ButtonWithSound
+        <button
           key={month}
-          onClick={() => onMonthSelect((index + 1).toString())}
+          value={(index + 1).toString()} // ¡Importante: debe ser string!
           className="p-4 text-lg bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
         >
           {month}
-        </ButtonWithSound>
+        </button>
       ))}
-    </div>
+    </KeyboardWrapper>
   );
 };

@@ -26,13 +26,24 @@ const correcto = new Howl({ src: ["/sounds/correcto.mp3"] });
 const incorrecto = new Howl({ src: ["/sounds/incorrecto.mp3"] });
 const boton = new Howl({ src: ["/sounds/pulsa.mp3"] });
 
-const MathExercise = () => {
+const MathExercise = ({ onComplete }: { onComplete: () => void; }) => {
   const [ejercicioActual, setEjercicioActual] = useState<Ejercicio | null>(null);
   const [respuestas, setRespuestas] = useState<string>("");
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [currentExercise, setCurrentExercise] = useState<number>(1);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
+// Efecto para notificar completado
+useEffect(() => {
+  if (currentExercise === 10 && isCorrect) {
+    const timer = setTimeout(() => {
+      onComplete(); // Notifica al ExerciseManager
+    }, 2000);
+    return () => clearTimeout(timer);
+  }
+}, [currentExercise, isCorrect, onComplete]);
+
+  
   useEffect(() => {
     const ejercicio = generarEjercicio();
     setEjercicioActual(ejercicio);

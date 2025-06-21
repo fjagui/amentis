@@ -46,16 +46,6 @@ export default function Layout({ children, currentProgress = 0 }: LayoutProps) {
       </main>
 
       {/* Footer con márgenes */}
-      <footer className="bg-white py-3 border-t border-gray-200 flex-shrink-0 px-4"> {/* Añadido px-4 */}
-        <div className="max-w-4xl mx-auto flex justify-between gap-3">
-          <button className="px-6 py-3 bg-gray-100 text-blue-800 rounded-xl hover:bg-gray-200 transition text-xl">
-            Volver
-          </button>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition text-xl">
-            Siguiente
-          </button>
-        </div>
-      </footer>
     </div>
   );
 }

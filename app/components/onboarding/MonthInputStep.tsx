@@ -22,13 +22,13 @@ export default function MonthStep({
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gray-700 mb-3">
-        Selecciona el mes:
+        ¿En qué mes estamos?
       </h2>
 
       {/* Input + Botón de validación */}
       <div className="flex gap-3 items-center">
         <div className="flex-1 p-4 text-2xl border-2 border-blue-200 rounded-lg bg-white min-h-[60px]">
-          {selectedMonth ? months[parseInt(selectedMonth) - 1] : '--'}
+          {selectedMonth ? months[parseInt(selectedMonth) - 1] : 'Mes'}
         </div>
         <ButtonWithSound
           onClick={() => onNext(selectedMonth)}
@@ -56,13 +56,7 @@ export default function MonthStep({
         ))}
       </div>
 
-      {/* Botón Atrás con sonido */}
-      <ButtonWithSound
-        onClick={onBack}
-        className="mt-6 p-3 bg-gray-200 rounded-lg w-full"
-      >
-        Volver
-      </ButtonWithSound>
+      
     </div>
   );
 }

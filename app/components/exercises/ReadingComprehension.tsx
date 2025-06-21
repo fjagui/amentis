@@ -10,7 +10,8 @@ const correcto = new Howl({ src: ["/sounds/correcto.mp3"] }); // Sonido de acier
 const incorrecto = new Howl({ src: ["/sounds/incorrecto.mp3"] }); // Sonido de error
 const boton = new Howl({ src: ["/sounds/pulsa.mp3"] }); // Sonido al pulsar el botón
 
-const ReadingComprehension = () => {
+const ReadingComprehension = ({ onComplete }: { onComplete: () => void; }) =>  {
+  const [gameCompleted, setGameCompleted] = useState(false);
   const [ejercicioActual, setEjercicioActual] = useState<any>(null);
   const [respuestasUsuario, setRespuestasUsuario] = useState<any[]>([]);
   const [currentPreguntaIndex, setCurrentPreguntaIndex] = useState<number>(0);
@@ -57,9 +58,7 @@ const ReadingComprehension = () => {
     } else {
       // Si hemos terminado todas las preguntas, mostrar mensaje de finalización
       setCompletado(true); // Marcar el ejercicio como completado
-      setTimeout(() => {
-        alert(`¡Has completado el ejercicio! Respuestas correctas: ${respuestasCorrectas}`);
-      }, 1500);
+      return;
     }
   };
 
