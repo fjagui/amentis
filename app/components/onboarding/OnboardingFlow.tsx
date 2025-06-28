@@ -85,29 +85,47 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
 
       <div className="pt-12">
         {step === 1 && (
+          <div>
+          <h2 className="text-2xl font-bold">¿Cómo te llamas?</h2>
           <NameInputStep
             initialValue={userData.name}
             onNext={(name) => handleNext({ name })}
           />
+          </div>
         )}
 
         {step === 2 && (
+          <div>
+          <h2 className="text-2xl font-bold">¿Qué día es hoy?</h2>
           <DayInputStep
             initialValue={userData.day}
             onNext={(day) => handleNext({ day })}
             onBack={handleBack}  // Añadimos el manejo de 'onBack'
           />
+          </div>
         )}
 
         {step === 3 && (
+           <div>
+           <h2 className="text-2xl font-bold text-gray-700 mb-3">
+           ¿En qué mes estamos?
+         </h2>
           <MonthInputStep
             initialValue={userData.month}
             onNext={(month) => handleNext({ month })}
             onBack={handleBack}  // Añadimos el manejo de 'onBack'
           />
+          
+         </div> 
+          
+          
+
         )}
 
         {step === 4 && (
+          <div>
+                 <h2 className="text-2xl font-bold">¿En qué año estamos?</h2>
+            
           <YearInputStep
             initialValue={userData.year}
             onNext={(year) => {
@@ -116,6 +134,7 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
             }}
             onBack={() => setStep(3)}
           />
+          </div>
         )}
 
         {step === 5 && (

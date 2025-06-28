@@ -21,9 +21,7 @@ export default function MonthStep({
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-700 mb-3">
-        ¿En qué mes estamos?
-      </h2>
+     
 
       {/* Input + Botón de validación */}
       <div className="flex gap-3 items-center">

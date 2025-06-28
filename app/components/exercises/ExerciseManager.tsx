@@ -6,6 +6,9 @@ import ReadingComprehension from './ReadingComprehension';
 import Layout from '../Layout'; // Asegúrate de que la ruta sea correcta
 import { ExerciseTransition } from './ExerciseTransition';
 import MemoryCardGame from './MemoryCardGame';
+import JuegoGlobos from './JuegoGlobos';
+import JuegoTangram from './TangramGame';
+import GuessTheDateGame from './GuessTheDateGame';
 
 type ExerciseComponent = {
   title: string;
@@ -20,6 +23,32 @@ export default function ExerciseManager() {
   const [showTransition, setShowTransition] = useState(false);
 
   const exercises: ExerciseComponent[] = [
+    { 
+      title:'Adivida la fecha',
+      component: <GuessTheDateGame 
+        onComplete={() => {
+           setProgress(75);
+           setExerciseCompleted(true);
+           setShowTransition(true);
+          
+        }} 
+      
+      />, 
+      duration: 120 
+    },
+    { 
+      title:'Explota los globos',
+      component: <JuegoGlobos 
+        onComplete={() => {
+           setProgress(75);
+           setExerciseCompleted(true);
+           setShowTransition(true);
+          
+        }} 
+      
+      />, 
+      duration: 120 
+    },
     { 
       title:'Memoria',
       component: <MemoryCardGame 
@@ -80,7 +109,7 @@ export default function ExerciseManager() {
   ];
 
 
-
+/*
   useEffect(() => {
     if (exerciseCompleted) {
       const timer = setTimeout(() => {
@@ -91,7 +120,7 @@ export default function ExerciseManager() {
       return () => clearTimeout(timer);
     }
   }, [exerciseCompleted]);
-
+*/
   const nextExercise = () => {
     if (currentExerciseIndex < exercises.length - 1) {
       setCurrentExerciseIndex(prev => prev + 1);
@@ -105,12 +134,13 @@ export default function ExerciseManager() {
     }
   };
 
-  const retryExercise = () => {
+  const replayExercise = () => {
     // Lógica para reiniciar el ejercicio actual
     // Puedes forzar un re-render con una key única
     // Reinicio forzado del ejercicio actual
     setCurrentExerciseIndex(prev => prev);
     setExerciseCompleted(false);
+    setShowTransition(false);
   };
   const exitTraining = () => {
     alert('Entrenamiento finalizado');
@@ -123,7 +153,7 @@ export default function ExerciseManager() {
           currentExercise={currentExerciseIndex + 1}
           totalExercises={exercises.length}
           onContinue={nextExercise}
-          onExit={exitTraining}
+          onReplay={replayExercise}
           exerciseName={exercises[currentExerciseIndex].title}
         />
       ) : (

@@ -36,7 +36,7 @@ export default function YearInputStep({
   return (
     <div className="flex flex-col h-full pb-32">
       <div className="space-y-6 flex-1">
-        <h2 className="text-2xl font-bold">¿En qué año estamos?</h2>
+   
 
         <div className="flex items-center gap-3">
           {/* Input visual */}

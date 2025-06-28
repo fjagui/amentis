@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "evento": "¿Qúe dia nació tu hija Mari?",
+      "fecha": "7/9/1962",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+    {
+      "id": 2,
+      "evento": "Día de Reyes",
+      "fecha": "6/1",
+      "pista": "Celebración cristiana que conmemora la visita de los Reyes Magos al Niño Jesús",
+      "tipoFecha": "mes-dia"
+    },
+    {
+      "id": 3,
+      "evento": "En qué año termino la Guerra Civil",
+      "fecha": "1939",
+      "pista": "Guerra Civil en España",
+      "tipoFecha": "año"
+    },
+    {
+      "id": 4,
+      "evento": "¿Cuándo se celebra el día de San José?",
+      "fecha": "19/3",
+      "pista": "Día de San José",
+      "tipoFecha": "mes-dia"
+    },
+    {
+      "id": 5,
+      "evento": "¿Cuándo nació tu nieto Carlos?",
+      "fecha": "25/1/1998",
+      "pista": "Fecha de nacimiento de Carlos",
+      "tipoFecha": "completa"
+    }
+  ]

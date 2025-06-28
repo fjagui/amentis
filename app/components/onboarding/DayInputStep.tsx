@@ -25,13 +25,13 @@ export default function DayInputStep({
   return (
       <div className="flex flex-col h-full pb-32">
         <div className="space-y-6 flex-1">
-          <h2 className="text-2xl font-bold">¿Qué día es hoy?</h2>
+          
           
           {/* Contenedor flex para input y botón */}
           <div className="flex items-center gap-3">
             {/* Input visual */}
             <div className="flex-1 p-4 text-3xl border-2 border-blue-200 rounded-lg min-h-[60px]">
-              {day || <span className="text-gray-400">Día de hoy</span>}
+              {day || <span className="text-gray-400">Día</span>}
             </div>
             
             {/* Botón circular separado */}

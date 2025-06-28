@@ -1,13 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaRedo, FaCheckCircle } from 'react-icons/fa';
 
 interface ExerciseTransitionProps {
   currentExercise: number;
   totalExercises: number;
   onContinue: () => void;
-  onExit: () => void;
+  onReplay: () => void; // Nueva prop para repetir el ejercicio
   exerciseName: string;
 }
 
@@ -15,11 +15,10 @@ export function ExerciseTransition({
   currentExercise,
   totalExercises,
   onContinue,
-  onExit,
+  onReplay, // Nueva prop
   exerciseName
 }: ExerciseTransitionProps) {
   const [message, setMessage] = useState('');
-  const [showButton, setShowButton] = useState(false);
 
   const messages = [
     `¡Dominaste ${exerciseName}!`,
@@ -29,15 +28,7 @@ export function ExerciseTransition({
   ];
 
   useEffect(() => {
-    // Mostrar mensaje aleatorio
     setMessage(messages[Math.floor(Math.random() * messages.length)]);
-    
-    // Mostrar el botón después de 1.5 segundos (para dar tiempo a leer el mensaje)
-    const timer = setTimeout(() => {
-      setShowButton(true);
-    }, 1500);
-
-    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -71,41 +62,37 @@ export function ExerciseTransition({
             />
           </div>
 
-          {showButton && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="pt-4"
+          <div className="pt-4 grid grid-cols-2 gap-4">
+            {/* Botón para repetir ejercicio */}
+            <motion.button
+              onClick={onReplay}
+              className="py-4 px-6 rounded-xl text-xl font-bold text-white shadow-lg flex items-center justify-center space-x-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <motion.button
-                onClick={onContinue}
-                className={`w-full py-4 px-6 rounded-xl text-xl font-bold text-white shadow-lg flex items-center justify-center space-x-3 ${
-                  currentExercise < totalExercises 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
-                    : 'bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span>
-                  {currentExercise < totalExercises 
-                    ? 'Siguiente ejercicio' 
-                    : '¡Completado todo!'}
-                </span>
-                <FaArrowRight />
-              </motion.button>
+              <FaRedo />
+              <span>Repetir</span>
+            </motion.button>
 
-              {currentExercise < totalExercises && (
-                <button
-                  onClick={onExit}
-                  className="mt-3 w-full py-3 px-6 bg-gray-200 text-gray-700 rounded-xl text-lg font-medium hover:bg-gray-300 transition-all"
-                >
-                  Finalizar entrenamiento
-                </button>
-              )}
-            </motion.div>
-          )}
+            {/* Botón para siguiente ejercicio */}
+            <motion.button
+              onClick={onContinue}
+              className={`py-4 px-6 rounded-xl text-xl font-bold text-white shadow-lg flex items-center justify-center space-x-3 ${
+                currentExercise < totalExercises 
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                  : 'bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700'
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>
+                {currentExercise < totalExercises 
+                  ? 'Siguiente' 
+                  : 'Finalizar'}
+              </span>
+              <FaArrowRight />
+            </motion.button>
+          </div>
         </div>
       </motion.div>
     </motion.div>

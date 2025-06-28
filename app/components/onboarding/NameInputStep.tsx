@@ -23,13 +23,12 @@ export default function NameInputStep({
   return (
     <div className="flex flex-col h-full pb-32">
       <div className="space-y-6 flex-1">
-        <h2 className="text-2xl font-bold">¿Cómo te llamas?</h2>
         
         {/* Contenedor flex para input y botón */}
         <div className="flex items-center gap-3">
           {/* Input visual */}
           <div className="flex-1 p-4 text-3xl border-2 border-blue-200 rounded-lg min-h-[60px]">
-            {name || <span className="text-gray-400">Tu nombre</span>}
+            {name || <span className="text-gray-400">Nombre</span>}
           </div>
           
           {/* Botón circular separado */}
