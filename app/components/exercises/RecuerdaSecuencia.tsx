@@ -1,5 +1,4 @@
 "use client";
-//comentario
 import { useState, useEffect } from "react";
 import { Howl } from "howler";
 import { AnimatePresence, motion } from "framer-motion";
@@ -171,7 +170,7 @@ const RecuerdaSecuencia = ({ onComplete}: { onComplete: () => void; }) => {
           <motion.div
             key={color}
             onClick={() => handleBotonClick(color)}
-            className={`w-40 h-40 rounded-full cursor-pointer shadow-2xl transition-all duration-300 ${
+            className={`w-40 h-40 rounded-full cursor-pointer shadow-2xl transition-all duration-300 relative ${
               botonesActivos.includes(color) 
                 ? "opacity-100 scale-110" 
                 : "opacity-50 hover:opacity-70"
@@ -179,7 +178,24 @@ const RecuerdaSecuencia = ({ onComplete}: { onComplete: () => void; }) => {
             style={{ backgroundColor: color }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          />
+          >
+            {/* Nuevo: Borde animado cuando el botón está activo */}
+            {botonesActivos.includes(color) && (
+              <motion.div
+                className="absolute inset-0 rounded-full border-4 border-white"
+                initial={{ scale: 1 }}
+                animate={{ 
+                  scale: 1.15,
+                  boxShadow: "0 0 20px 5px rgba(255, 255, 255, 0.8)"
+                }}
+                transition={{ 
+                  duration: 0.4,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              />
+            )}
+          </motion.div>
         ))}
       </div>
 

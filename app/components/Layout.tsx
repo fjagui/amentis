@@ -9,7 +9,7 @@ type LayoutProps = {
   currentProgress?: number;
 };
 
-export default function Layout({ children, currentProgress = 0 }: LayoutProps) {
+export default function Layout({ children, currentProgress }: LayoutProps) {
   return (
     <div className="flex flex-col h-full mx-1"> {/* Añadido mx-4 para márgenes laterales */}
       {/* Header con margen interno */}

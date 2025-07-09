@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Tu familia cercana",
+        "description": "Escribe los nombres de tus hijos, nietos y hermanos. Para cada persona, escribe también su fecha de nacimiento (mes y año)."
+      },
+      {
+        "id": 2,
+        "title": "Receta de cocina",
+        "description": "Escribe los ingredientes y pasos para preparar tu plato favorito de tu infancia. ¿Quién te enseñó a prepararlo?"
+      },
+      {
+        "id": 3,
+        "title": "Tus lugares favoritos",
+        "description": "Escribe los nombres de 5 lugares que te gustaba visitar cuando eras joven. ¿Qué recuerdos tienes de esos lugares?"
+      },
+      {
+        "id": 4,
+        "title": "Trabajos que tuviste",
+        "description": "Haz una lista de los trabajos que tuviste a lo largo de tu vida, desde el primero hasta el último. ¿Qué edad tenías cuando empezaste cada trabajo?"
+      },
+      {
+        "id": 5,
+        "title": "Tus vecinos de antes",
+        "description": "Escribe los nombres de tus vecinos de hace 20 años. ¿En qué casa vivía cada uno? ¿Qué recuerdas de ellos?"
+      },
+      {
+        "id": 6,
+        "title": "Tus amigos de la juventud",
+        "description": "Escribe los nombres de tus 5 mejores amigos cuando tenías 20 años. ¿Qué hacían juntos? ¿Dónde se conocieron?"
+      },
+      {
+        "id": 7,
+        "title": "Objetos de tu casa antigua",
+        "description": "Haz una lista de 10 objetos que tenías en tu casa cuando eras joven y que ya no tienes. ¿Qué pasó con esos objetos?"
+      },
+      {
+        "id": 8,
+        "title": "Canciones tradicionales",
+        "description": "Escribe los títulos de 5 canciones que cantabas cuando eras joven. ¿Recuerdas alguna estrofa de una de ellas?"
+      },
+      {
+        "id": 9,
+        "title": "Fiestas del pueblo",
+        "description": "Describe cómo se celebraban las fiestas del pueblo cuando eras niño. ¿Qué actividades hacían? ¿Qué comidas especiales preparaban?"
+      },
+      {
+        "id": 10,
+        "title": "Tu primer hogar",
+        "description": "Describe cómo era tu casa cuando eras niño. ¿Cuántas habitaciones tenía? ¿Cómo era la cocina? ¿Dónde jugabas?"
+      },
+      {
+        "id": 11,
+        "title": "Recuerdos de la escuela",
+        "description": "Escribe el nombre de tu maestro/a favorito de la infancia. ¿Qué aspecto tenía? ¿Por qué te gustaba? ¿Qué te enseñó?"
+      },
+      {
+        "id": 12,
+        "title": "Tradiciones familiares",
+        "description": "Describe una tradición familiar que celebraran cuando eras joven. ¿En qué consistía? ¿Quiénes participaban? ¿Qué comían?"
+      },
+      {
+        "id": 13,
+        "title": "Tus juegos de infancia",
+        "description": "Haz una lista de 5 juegos que jugabas en la calle cuando eras niño. ¿Cómo se jugaba a cada uno? ¿Con quién jugabas?"
+      },
+      {
+        "id": 14,
+        "title": "Tus viajes importantes",
+        "description": "Escribe sobre el primer viaje que hiciste fuera de tu pueblo o ciudad. ¿A dónde fuiste? ¿Con quién? ¿Qué recuerdas especialmente?"
+      },
+      {
+        "id": 15,
+        "title": "Personas que admiraste",
+        "description": "Escribe los nombres de 3 personas que admiraste cuando eras joven y por qué. Podrían ser familiares, vecinos, maestros o personajes públicos."
+      },
+      {
+        "id": 16,
+        "title": "Tus primeras veces",
+        "description": "Escribe sobre tu primer trabajo, tu primer amor y tu primer hogar propio. ¿Qué recuerdas de cada una de estas 'primeras veces'?"
+      },
+      {
+        "id": 17,
+        "title": "Cómo conociste a tu pareja",
+        "description": "Escribe la historia de cómo conociste a tu marido/esposa o pareja. ¿Dónde fue? ¿Qué te llamó la atención? ¿Qué hicieron en su primera cita?"
+      },
+      {
+        "id": 18,
+        "title": "Cambios en tu barrio",
+        "description": "Describe cómo era tu barrio cuando llegaste a vivir aquí. ¿Qué cosas han cambiado? ¿Qué negocios había antes que ya no existen?"
+      },
+      {
+        "id": 19,
+        "title": "Tus habilidades especiales",
+        "description": "Escribe 3 cosas que se te daban especialmente bien cuando eras joven (cocinar, coser, arreglar cosas, etc.). ¿Quién te enseñó? ¿Cómo desarrollaste esa habilidad?"
+      },
+      {
+        "id": 20,
+        "title": "Momentos históricos que viviste",
+        "description": "Escribe sobre algún acontecimiento histórico importante que viviste personalmente. ¿Dónde estabas? ¿Cómo te enteraste? ¿Qué recuerdas de ese día?"
+      },
+    {
+      "id": 21,
+      "title": "Ingredientes de tortilla de patatas",
+      "description": "Escribe todos los ingredientes necesarios para hacer una tortilla de patatas tradicional. Incluye las cantidades aproximadas para 4 personas."
+    },
+    {
+      "id": 22,
+      "title": "Días de la semana",
+      "description": "Escribe los días de la semana en orden, comenzando por lunes. Después de completar los días, escribe los meses del año en orden."
+    },
+    {
+      "id": 23,
+      "title": "Utensilios de cocina",
+      "description": "Escribe al menos 10 utensilios de tu cocina."
+    },
+    {
+      "id": 24,
+      "title": "Refrán",
+      "description": "Escribe un refrán que conozcas."
+    }
+  ]

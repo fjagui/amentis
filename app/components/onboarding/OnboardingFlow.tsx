@@ -7,6 +7,7 @@ import YearInputStep from './YearInputStep';
 import { UserGreeting } from '../UserGreeting';
 import { FaArrowLeft } from 'react-icons/fa';
 import { ConfirmationScreen } from '../ConfirmationScreen';
+import Image from 'next/image';
 
 export default function OnboardingFlow({ onComplete }: { onComplete: () => void }) {
   const [step, setStep] = useState(1);
@@ -49,7 +50,7 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
       userDate.getMonth() === currentDate.getMonth() &&
       userDate.getFullYear() === currentDate.getFullYear()
     );
-    console.log('Estoy dentro de onboarding');
+    
     if (isValid) {
       setStep(5); // Redirige a ejercicios
       return true;
@@ -64,86 +65,103 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
     return (
       <ConfirmationScreen 
         userName={userData.name}
-        date={new Date()} onComplete={function (): void {
-          throw new Error('Function not implemented.');
-        } }      />
+        date={new Date()} 
+        onComplete={() => {}} 
+      />
     );
   }
 
   return (
-    <div className="onboarding-container space-y-6">
-      {/* Botón Atrás */}
-      {step > 1 && (
-        <button
-          onClick={handleBack}
-          className="fixed left-4 top-4 z-50 flex items-center gap-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-all"
-        >
-          <FaArrowLeft className="text-blue-600" />
-          <span className="sr-only">Volver a {getPreviousStep()}</span>
-        </button>
-      )}
-
-      <div className="pt-12">
-        {step === 1 && (
-          <div>
-          <h2 className="text-2xl font-bold">¿Cómo te llamas?</h2>
-          <NameInputStep
-            initialValue={userData.name}
-            onNext={(name) => handleNext({ name })}
-          />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+          {/* Cabecera simplificada */}
+          <div className="w-full text-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-800">
+              {step === 1 && '¿Cómo te llamas?'}
+              {step === 2 && '¿Qué día es hoy?'}
+              {step === 3 && '¿En qué mes estamos?'}
+              {step === 4 && '¿En qué año estamos?'}
+            </h2>
           </div>
-        )}
 
-        {step === 2 && (
-          <div>
-          <h2 className="text-2xl font-bold">¿Qué día es hoy?</h2>
-          <DayInputStep
-            initialValue={userData.day}
-            onNext={(day) => handleNext({ day })}
-            onBack={handleBack}  // Añadimos el manejo de 'onBack'
-          />
+          {/* Barra de progreso */}
+          {step > 1 && step < 5 && (
+            <div className="mb-8">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-medium text-blue-700">
+                  Paso {step} de 5
+                </span>
+                <span className="text-sm font-medium text-blue-700">
+                  {Math.round((step / 5) * 100)}% completado
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5">
+                <div 
+                  className="bg-blue-600 h-2.5 rounded-full transition-all duration-500" 
+                  style={{ width: `${(step / 5) * 100}%` }}
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Pasos del onboarding */}
+          <div className="space-y-8">
+            {step === 1 && (
+              <NameInputStep
+                initialValue={userData.name}
+                onNext={(name) => handleNext({ name })}
+              />
+            )}
+
+            {step === 2 && (
+              <DayInputStep
+                initialValue={userData.day}
+                onNext={(day) => handleNext({ day })}
+                onBack={handleBack}
+              />
+            )}
+
+            {step === 3 && (
+              <MonthInputStep
+                initialValue={userData.month}
+                onNext={(month) => handleNext({ month })}
+                onBack={handleBack}
+              />
+            )}
+
+            {step === 4 && (
+              <YearInputStep
+                initialValue={userData.year}
+                onNext={(year) => {
+                  return validateDate(year);
+                }}
+                onBack={() => setStep(3)}
+              />
+            )}
+
+            {step === 5 && (
+              <ConfirmationScreen 
+                userName={userData.name}
+                date={new Date()}
+                onComplete={onComplete}
+              />
+            )}
           </div>
-        )}
 
-        {step === 3 && (
-           <div>
-           <h2 className="text-2xl font-bold text-gray-700 mb-3">
-           ¿En qué mes estamos?
-         </h2>
-          <MonthInputStep
-            initialValue={userData.month}
-            onNext={(month) => handleNext({ month })}
-            onBack={handleBack}  // Añadimos el manejo de 'onBack'
-          />
-          
-         </div> 
-          
-          
-
-        )}
-
-        {step === 4 && (
-          <div>
-                 <h2 className="text-2xl font-bold">¿En qué año estamos?</h2>
-            
-          <YearInputStep
-            initialValue={userData.year}
-            onNext={(year) => {
-              console.log('onNext llamado con:', year); // 🔍 Debug aquí
-              return validateDate(year);
-            }}
-            onBack={() => setStep(3)}
-          />
-          </div>
-        )}
-
-        {step === 5 && (
-          <ConfirmationScreen 
-            userName={userData.name}
-            date={new Date()}
-            onComplete={onComplete} // Redirige a ejercicios
-          />
-        )}
+          {/* Botón de retroceso centrado */}
+          {step > 1 && step < 5 && (
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={handleBack}
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-all"
+              >
+                <FaArrowLeft className="text-white" />
+                <span>Volver a {getPreviousStep()}</span>
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
