@@ -15,16 +15,16 @@
     },
     {
       "id": 3,
-      "evento": "En qué año termino la Guerra Civil",
-      "fecha": "1939",
-      "pista": "Guerra Civil en España",
-      "tipoFecha": "año"
+      "evento": "Cuándo se celebra la Navidad",
+      "fecha": "25/12",
+      "pista": "Navidad",
+      "tipoFecha": "mes-dia"
     },
     {
       "id": 4,
       "evento": "¿Cuándo se celebra el día de San José?",
       "fecha": "19/3",
-      "pista": "Día de San José",
+      "pista": "",
       "tipoFecha": "mes-dia"
     },
     {

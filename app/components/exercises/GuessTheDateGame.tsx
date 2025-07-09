@@ -307,7 +307,7 @@ const GuessTheDateGame = ({ onComplete }: { onComplete: () => void }) => {
         </div>
         
         <div className="mb-4">
-          <p className="text-xl font-semibold text-blue-600">
+          <p className="text-3xl font-semibold text-blue-600">
             {currentEvent.evento}
           </p>
         </div>
@@ -321,7 +321,7 @@ const GuessTheDateGame = ({ onComplete }: { onComplete: () => void }) => {
 
         {/* Mostrar cadena de fecha en formato natural */}
         <div className="mb-6 flex justify-center">
-          <div className="text-3xl font-bold bg-blue-100 px-6 py-3 rounded-lg min-w-[300px] text-center">
+          <div className="text-2xl font-bold bg-blue-100 px-6 py-3 rounded-lg min-w-[300px] text-center">
             {buildNaturalDateString()}
           </div>
         </div>

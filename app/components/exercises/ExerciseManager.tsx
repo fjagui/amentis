@@ -24,7 +24,7 @@ export default function ExerciseManager() {
 
   const exercises: ExerciseComponent[] = [
     { 
-      title:'Adivida la fecha',
+      title:'Adivina la fecha',
       component: <GuessTheDateGame 
         onComplete={() => {
            setProgress(75);

@@ -29,8 +29,8 @@ const ReadingComprehension = ({ onComplete }: { onComplete: () => void }) => {
         // Seleccionar historia basada en el día del mes
         const historiaIndex = diaDelMes % data.length;
         
-        //setHistoriaActual(data[historiaIndex]);
-        setHistoriaActual(data[3]);
+        setHistoriaActual(data[historiaIndex]);
+        //setHistoriaActual(data[3]);
 
       });
   }, []);
