@@ -7,6 +7,7 @@ import Layout from '../Layout';
 import { ExerciseTransition } from './ExerciseTransition';
 import MemoryCardGame from './MemoryCardGame';
 import JuegoGlobos from './JuegoGlobos';
+import TresEnRaya from './TresEnRaya';
 import JuegoTangram from './TangramGame';
 import GuessTheDateGame from './GuessTheDateGame';
 import WritingExercise from './WritingExercise';
@@ -25,9 +26,27 @@ export default function ExerciseManager() {
   const [showTransition, setShowTransition] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
+  const [currentGame, setCurrentGame] = useState<number>(0);
   const exercises: ExerciseComponent[] = [
-   
+    { 
+      title: 'Tres en Raya',
+      component: <TresEnRaya 
+        onComplete={() => {
+          // Incrementar contador de partidas
+          setCurrentGame(prev => prev + 1);
+          
+          // Si se han jugado 3 partidas, completar el ejercicio
+          if (currentGame >= 2) {
+            setProgress(75);
+            setExerciseCompleted(true);
+            setShowTransition(true);
+            setCurrentGame(0); // Reiniciar contador para la próxima vez
+          }
+        }} 
+      />, 
+      duration: 120 
+    },   
+
     { 
       title:'Adivina la fecha',
       component: <GuessTheDateGame 
