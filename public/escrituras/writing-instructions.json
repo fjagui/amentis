@@ -1,8 +1,8 @@
 [
-    {
+      {
         "id": 1,
         "title": "Tu familia cercana",
-        "description": "Escribe los nombres de tus hijos, nietos y hermanos. Para cada persona, escribe también su fecha de nacimiento (mes y año)."
+        "description": "Escribe los nombres de tus hijos. Para cada persona, escribe también su fecha de nacimiento (mes y año)."
       },
       {
         "id": 2,
@@ -46,7 +46,7 @@
       },
       {
         "id": 10,
-        "title": "Tu primer hogar",
+        "title": "Tu primera casa",
         "description": "Describe cómo era tu casa cuando eras niño. ¿Cuántas habitaciones tenía? ¿Cómo era la cocina? ¿Dónde jugabas?"
       },
       {
@@ -118,5 +118,15 @@
       "id": 24,
       "title": "Refrán",
       "description": "Escribe un refrán que conozcas."
+    },
+    {
+      "id": 25,
+      "title": "Tu familia cercana",
+      "description": "Escribe los nombres de tus nietos. Para cada persona, escribe también su fecha de nacimiento (mes y año)."
+    },
+    {
+      "id": 26,
+      "title": "Tu familia cercana",
+      "description": "Escribe los nombres de tus hermanos. Para cada persona, escribe también su fecha de nacimiento (mes y año)."
     }
   ]
