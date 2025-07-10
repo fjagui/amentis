@@ -8,31 +8,31 @@
         "id": 1,
         "pregunta": "¿Cómo se llama la mujer que aprende a leer?",
         "opciones": ["Laura", "Josefa", "María"],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 2
       },
       {
         "id": 2,
         "pregunta": "¿Dónde iba María cada tarde?",
         "opciones": ["A una tienda", "A una cafetería", "A la biblioteca"],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 2
       },
       {
         "id": 3,
         "pregunta": "¿Quién ayudaba a María a aprender a leer?",
         "opciones": ["Josefa", "Elena", "Laura"],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 2
       },
       {
         "id": 4,
         "pregunta": "¿Qué libro leyó sola por primera vez?",
         "opciones": ["Cien Años de Soledad", "El abuelo", "Pinocho"],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 2
       },
       {
         "id": 5,
         "pregunta": "¿Dónde trabajaba María?",
         "opciones": ["En una tienda", "En una cafetería", "En el campo"],
-        "respuestaCorrecta": 1
+        "respuestaCorrecta": 2
       }
     ]
   },
@@ -45,25 +45,25 @@
         "id": 1,
         "pregunta": "¿Qué oficio aprendió Don Luis?",
         "opciones": ["Panadería", "Carpintería", "Costura"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 2,
         "pregunta": "¿Dónde tomaba las clases?",
         "opciones": ["En un parque", "En el centro comunitario", "En su casa"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 3,
         "pregunta": "¿Cuál fue su primera obra terminada?",
         "opciones": ["Una mesa", "Un banco azul", "Un estante"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 4,
         "pregunta": "¿Qué hace Luis ahora?",
         "opciones": ["Vende herramientas", "Enseña a otros adultos", "Trabaja en una fábrica"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 5,
@@ -73,7 +73,7 @@
           "\"Las manos saben, pero primero deben aprender\"",
           "\"Nunca dejes para mañana lo que puedas hacer hoy\""
         ],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       }
     ]
   },
@@ -86,13 +86,13 @@
         "id": 1,
         "pregunta": "¿Cómo se llama el hombre del cuento?",
         "opciones": ["Luis", "Juan", "Pedro"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 2,
         "pregunta": "¿Dónde vive Juan?",
         "opciones": ["En Sevilla", "En Priego de Córdoba", "En Córdoba"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 3,
@@ -104,7 +104,7 @@
         "id": 4,
         "pregunta": "¿Quién atrapó el sombrero?",
         "opciones": ["Un niño", "Una niña", "Un policía"],
-        "respuestaCorrecta": 0
+        "respuestaCorrecta": 1
       },
       {
         "id": 5,

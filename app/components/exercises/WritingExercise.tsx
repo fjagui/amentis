@@ -218,9 +218,9 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
                   {instructions[currentInstruction].title}
                 </h2>
                 
-                <div className="text-gray-700 mb-6 bg-white p-4 rounded-lg border">
-                  {instructions[currentInstruction].description}
-                </div>
+                <div className="text-xl text-gray-700 mb-6 bg-white p-6 rounded-lg border-4 border-blue-300 shadow-md">
+  {instructions[currentInstruction].description}
+</div>
                 
                 <div className="mt-6 p-4 bg-blue-100 border border-blue-200 rounded-lg">
                   <p className="flex items-center text-blue-700">
@@ -285,7 +285,7 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
                 <div className="bg-white p-4 rounded-lg border border-gray-200 mb-4">
                   <ol className="list-decimal list-inside space-y-2 text-left">
                     <li className="mb-2">Abre la aplicación de WhatsApp en tu teléfono</li>
-                    <li className="mb-2">Envía la foto al número: <span className="font-semibold">+34 123 456 789</span></li>
+                    <li className="mb-2">Envía la foto por WhatsApp</li>
                     <li>Espera confirmación de que hemos recibido tu foto</li>
                   </ol>
                 </div>

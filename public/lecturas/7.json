@@ -1,383 +1,372 @@
 [
-    {
+  {
+    "id": 1,
+    "titulo": "El Misterio del Pastel",
+    "texto": "Lucía preparaba un pastel de zanahoria para el cumpleaños de su hijo.\nSiguió la receta al pie de la letra:\n1. Mezcló harina, huevos y zanahoria rallada.\n2. Añadió canela y nueces picadas.\n3. Metió el molde en el horno a 180 grados.\n\nPero al sacarlo, ¡el pastel estaba completamente plano!\n—¿Qué salió mal? —preguntó desconcertada.\n\nSu abuela, experta cocinera, olió la masa cruda.\n—¡Olvidaste el polvo de hornear! —exclamó riendo.\nLucía miró el paquete intacto sobre la mesa.\n—Tienes razón, abuela. ¡Haré otro!",
+    "preguntas": [
+      {
         "id": 1,
-        "titulo": "El Misterio del Pastel",
-        "texto": "Lucía preparaba un pastel de zanahoria para el cumpleaños de su hijo.\nSiguió la receta al pie de la letra:\n1. Mezcló harina, huevos y zanahoria rallada.\n2. Añadió canela y nueces picadas.\n3. Metió el molde en el horno a 180 grados.\n\nPero al sacarlo, ¡el pastel estaba completamente plano!\n—¿Qué salió mal? —preguntó desconcertada.\n\nSu abuela, experta cocinera, olió la masa cruda.\n—¡Olvidaste el polvo de hornear! —exclamó riendo.\nLucía miró el paquete intacto sobre la mesa.\n—Tienes razón, abuela. ¡Haré otro!",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Qué tipo de pastel preparaba Lucía?",
-            "opciones": ["De chocolate", "De zanahoria", "De manzana"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Para qué ocasión era el pastel?",
-            "opciones": ["Una boda", "Un cumpleaños", "Una fiesta de trabajo"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué problema tuvo el pastel?",
-            "opciones": ["Se quemó", "Quedó crudo", "No subió"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Quién descubrió el error?",
-            "opciones": ["Su hijo", "Su abuela", "Su vecina"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué ingrediente olvidó Lucía?",
-            "opciones": ["Huevos", "Polvo de hornear", "Azúcar"],
-            "respuestaCorrecta": 0
-          }
-        ]
+        "pregunta": "¿Qué tipo de pastel preparaba Lucía?",
+        "opciones": ["De chocolate", "De zanahoria", "De manzana"],
+        "respuestaCorrecta": 1
       },
       {
         "id": 2,
-        "titulo": "El Pastor y la Tormenta",
-        "texto": "Ramón pastoreaba sus cabras en la sierra de Córdoba cuando vio nubes negras.\n—¡Viene tormenta! —gritó a su perro Luna.\nJuntos guiaron al rebaño hacia el refugio de piedra.\n\nPero una cabrita joven, Curiosa, se separó del grupo.\nRamón la encontró asustada bajo un alcornoque.\n—¡Vamos, pequeña! —dijo cargándola en sus brazos.\n\nJusto al entrar al refugio, empezó a llover torrencialmente.\nRamón secó a Curiosa con su manta.\n—Hoy aprendiste a no alejarte —susurró mientras las otras cabras masticaban tranquilamente su heno.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Dónde pastoreaba Ramón?",
-            "opciones": ["En la playa", "En la sierra de Córdoba", "En un valle"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Cómo se llamaba su perro?",
-            "opciones": ["Truco", "Luna", "Fiel"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué animal se separó del grupo?",
-            "opciones": ["Un cordero", "La cabrita Curiosa", "El perro"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Dónde encontró Ramón a la cabrita?",
-            "opciones": ["En un río", "Bajo un alcornoque", "En una cueva"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué hizo Ramón al entrar al refugio?",
-            "opciones": ["Encendió fuego", "Secó a la cabrita", "Cocinó sopa"],
-            "respuestaCorrecta": 0
-          }
-        ]
+        "pregunta": "¿Para qué ocasión era el pastel?",
+        "opciones": ["Una boda", "Un cumpleaños", "Una fiesta de trabajo"],
+        "respuestaCorrecta": 1
       },
       {
         "id": 3,
-        "titulo": "La Gallina Valiente",
-        "texto": "En una granja de Zagrilla vivía una gallina llamada Clotilde. Cada mañana ponía un huevo y cantaba orgullosa.\n\nUn día, el zorro entró al gallinero mientras todos dormían. Clotilde lo vio y cacareó tan fuerte que despertó al perro guardián.\n\n—¡Alerta, alerta! —gritaba Clotilde.\n\nEl perro corrió y espantó al zorro, que huyó asustado por el campo. Las otras gallinas aplaudieron a Clotilde con sus alas.\n\nDesde ese día, Clotilde fue considerada una heroína en la granja.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Dónde vivía Clotilde?",
-            "opciones": ["En el bosque", "En una granja de Zagrilla", "En la ciudad"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Qué hacía Clotilde cada mañana?",
-            "opciones": ["Salía a pasear", "Volaba", "Ponía un huevo y cantaba"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué animal entró al gallinero?",
-            "opciones": ["Un gato", "Un zorro", "Un lobo"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Cómo reaccionó Clotilde al ver al zorro?",
-            "opciones": ["Se escondió", "Salió volando", "Cacareó fuerte"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué hicieron las otras gallinas después?",
-            "opciones": ["Aplaudieron con sus alas", "Corrieron al bosque", "Se durmieron"],
-            "respuestaCorrecta": 0 
-          }
-        ]
+        "pregunta": "¿Qué problema tuvo el pastel?",
+        "opciones": ["Se quemó", "Quedó crudo", "No subió"],
+        "respuestaCorrecta": 2
       },
       {
         "id": 4,
-        "titulo": "La Costurera y el Pantalón Rebelde",
-        "texto": "Doña Berta era la mejor costurera del pueblo. Remendaba, cosía, bordaba... y también perdía las agujas con frecuencia.\n\nUna mañana llegó Don Eulogio con un pantalón roto de una manera misteriosa.\n—No pregunte cómo —dijo, rojo como un tomate.\n\nBerta se puso sus gafas, tomó hilo, y comenzó su arte. Pero cada vez que intentaba coser, el pantalón se le resbalaba de la mesa.\n\n—¡Este pantalón está embrujado! —exclamó.\n\nDespués de mucho esfuerzo, logró terminarlo. Don Eulogio se lo probó y sonrió.\n—¡Ahora sí puedo sentarme sin preocuparme!\n\n—O sin caerte del caballo —murmuró Berta, y ambos soltaron una carcajada.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Qué hacía Doña Berta?",
-            "opciones": ["Cocinaba pasteles", "Era costurera", "Vendía verduras"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Quién llevó un pantalón roto?",
-            "opciones": ["Don Eulogio", "Doña Clara", "Un niño del pueblo"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué hacía el pantalón mientras Berta lo cosía?",
-            "opciones": ["Se agrandaba solo", "Cambiaba de color", "Se resbalaba de la mesa"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Qué dijo Berta sobre el pantalón?",
-            "opciones": ["Está embrujado", "Está de moda", "Está muy limpio"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Cómo terminó la historia?",
-            "opciones": ["Con un aplauso", "Con una discusión", "Con una carcajada"],
-            "respuestaCorrecta": 2
-          }
-        ]
+        "pregunta": "¿Quién descubrió el error?",
+        "opciones": ["Su hijo", "Su abuela", "Su vecina"],
+        "respuestaCorrecta": 1
       },
       {
         "id": 5,
-        "titulo": "El Panadero y la Masa Rebelde",
-        "texto": "Don Fermín era el panadero más madrugador del barrio. Cada día, a las cinco en punto, empezaba a preparar su famosa masa secreta.\n\nUna mañana, mientras amasaba medio dormido, la masa salió disparada como una babosa veloz.\n—¡Vuelve aquí, masa escurridiza! —gritó Fermín, corriendo con el rodillo en mano.\n\nLa masa rebotó en el gato, pasó por debajo de la mesa y terminó pegada en el techo.\n\nDespués de mucho esfuerzo, logró bajarla y hornearla. Sorprendentemente, el pan salió delicioso.\n\n—Tiene un sabor... aventurero —dijo la clienta, relamiéndose.\n\nDesde entonces, Fermín la llamó “la baguette fugitiva”.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿A qué hora comenzaba Don Fermín a trabajar?",
-            "opciones": ["A las cinco en punto", "A las siete", "A las diez"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Qué hizo la masa esa mañana?",
-            "opciones": ["Se quemó", "Se volvió invisible", "Salió disparada"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Dónde terminó la masa?",
-            "opciones": ["En la calle", "Pegada en el techo", "En el horno"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Cómo quedó el pan al final?",
-            "opciones": ["Salado", "Delicioso", "Duro como piedra"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Cómo llamó Fermín al pan?",
-            "opciones": ["La barra mágica", "La baguette fugitiva", "El pan dormilón"],
-            "respuestaCorrecta": 1
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "titulo": "La Heladera y el Calorón",
-        "texto": "En pleno verano, Doña Tina vendía helados en la plaza del pueblo. Era famosa por su helado de sandía con menta.\n\nUn día, el sol pegaba tan fuerte que los conos se derretían antes de llegar a las manos de los niños.\n\n—¡Ay madre! ¡Esto parece sopa fría! —dijo Tina, mientras corría con la nevera portátil.\n\nDecidió servir los helados en vasos con pajita. Los niños estaban felices.\n\n—¡Ahora podemos beberlos! —gritaban mientras se refrescaban.\n\nDesde entonces, Doña Tina ofrecía “helados para beber” en los veranos.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Qué vendía Doña Tina?",
-            "opciones": ["Churros", "Helados", "Limonada"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Cómo era el clima ese día?",
-            "opciones": ["Lluvioso", "Muy caluroso", "Con viento fuerte"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué pasaba con los conos?",
-            "opciones": ["Se rompían", "Se derretían", "Salían volando"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Qué solución encontró Tina?",
-            "opciones": ["No vendió nada", "Usó vasos con pajita", "Puso los helados en cubos"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Cómo llamaron los niños a los helados?",
-            "opciones": ["Sopa de frutas", "Helado para beber", "Licuado mágico"],
-            "respuestaCorrecta": 1
-          }
-        ]
-      },
-      {
-        "id": 7,
-        "titulo": "El Zapatero y la Sandalia Voladora",
-        "texto": "Don Cosme era zapatero y hablaba con sus zapatos mientras los arreglaba. Un día llegó una clienta con una sandalia rota.\n\n—Se me rompió en plena boda —dijo, mostrando la suela suelta.\n\nCosme, concentrado, aplicó pegamento, cosió... y de pronto, ¡la sandalia salió volando!\n\n—¡Es que lleva mucho ritmo! —bromeó.\n\nLa clienta rió tanto que decidió dejarle ambos zapatos para equilibrar la energía.\n\n—¡Y por si acaso, pégales bien las ganas de bailar!",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿A qué se dedicaba Don Cosme?",
-            "opciones": ["Era panadero", "Era zapatero", "Era bailarín"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Qué trajo la clienta?",
-            "opciones": ["Unos botines", "Una sandalia rota", "Un bolso viejo"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué pasó mientras Cosme trabajaba?",
-            "opciones": ["La sandalia voló", "Se durmió", "Se quemó la suela"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Qué hizo la clienta al final?",
-            "opciones": ["Se enfadó", "Le dejó ambos zapatos", "Pidió un reembolso"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué comentario gracioso hizo Cosme?",
-            "opciones": ["¡Tiene alas!", "¡Es que lleva mucho ritmo!", "¡Zapato saltarín!"],
-            "respuestaCorrecta": 1
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "titulo": "La Romería de la Abuela Cloti",
-        "texto": "Cada año, la abuela Cloti preparaba empanadas para la romería del pueblo. Este año decidió llevar cien, pero su nieto Mateo tropezó y cayó encima del cesto.\n\n—¡Ay mi espalda! —gritó Mateo.\n—¡Ay mis empanadas! —gritó Cloti.\n\nAunque llegaron un poco aplastadas, la gente decía:\n—¡Están más sabrosas que nunca!\n\nDesde entonces, las llamó “empanadas con cariño y pisotón”.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Qué preparaba la abuela Cloti para la romería?",
-            "opciones": ["Galletas", "Empanadas", "Tortillas"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Quién tropezó con el cesto?",
-            "opciones": ["El cura", "El nieto Mateo", "Un perro"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Cómo quedaron las empanadas?",
-            "opciones": ["Aplastadas", "Quemadas", "Heladas"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Qué dijo la gente del sabor?",
-            "opciones": ["No tenían gusto", "Eran más sabrosas que nunca", "Sabían raro"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Cómo las llamó Cloti después?",
-            "opciones": ["Empanadas mágicas", "Empanadas de la suerte", "Empanadas con cariño y pisotón"],
-            "respuestaCorrecta": 2
-          }
-        ]
-      },
-      {
-        "id": 9,
-        "titulo": "La Jardinera y el Girasol Bailarín",
-        "texto": "Lucía adoraba sus plantas, pero especialmente un girasol que siempre miraba al sol con exagerado entusiasmo.\n\nUn día de mucho viento, el girasol empezó a girar como trompo.\n—¡Ay madre, que me sale bailarín! —dijo Lucía.\n\nLe puso una cinta para sujetarlo, pero el girasol seguía girando cada vez que oía música.\n\nLos vecinos venían a verlo bailar con la radio. Y Lucía empezó a cobrar entrada:\n—¡Bienvenidos al show del girasol bailarín!",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Qué cuidaba Lucía con cariño?",
-            "opciones": ["Un rosal", "Un bonsái", "Un girasol"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 2,
-            "pregunta": "¿Qué pasaba con el girasol cuando hacía viento?",
-            "opciones": ["Se caía", "Se marchitaba", "Giraba como un trompo"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué hacía el girasol cuando oía música?",
-            "opciones": ["Se ponía triste", "Dejaba de girar", "Seguía girando"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Qué hacían los vecinos?",
-            "opciones": ["Le traían agua", "Venían a verlo", "Lo regaban"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué hizo Lucía con el espectáculo?",
-            "opciones": ["Lo ignoró", "Lo grabó", "Cobró entrada"],
-            "respuestaCorrecta": 2
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "titulo": "El Socorrista Dormilón",
-        "texto": "En la piscina municipal, Julián era el socorrista. Siempre atento... excepto justo después de almorzar.\n\nUna vez, se quedó dormido en su silla alta. Los niños lo vieron roncando con gafas de sol.\n\n—¡Está entrenando apnea en seco! —bromeó uno.\n\nLe dibujaron un bigote con crema solar y lo despertaron con una bomba en la piscina.\n\n—¡Estoy en alerta! —dijo sobresaltado, con el bigote blanco aún puesto.\n\nDesde ese día, Julián no volvió a dormirse… al menos no sin sombrilla.",
-        "preguntas": [
-          {
-            "id": 1,
-            "pregunta": "¿Dónde trabajaba Julián?",
-            "opciones": ["En la playa", "En la piscina municipal", "En un parque"],
-            "respuestaCorrecta": 1
-          },
-
-          {
-            "id": 2,
-            "pregunta": "¿Qué hacía después de comer?",
-            "opciones": ["Jugaba al fútbol", "Se dormía", "Leía cuentos"],
-            "respuestaCorrecta": 1
-          },
-          {
-            "id": 3,
-            "pregunta": "¿Qué le dibujaron los niños?",
-            "opciones": ["Un bigote", "Un corazón", "Un tiburón"],
-            "respuestaCorrecta": 0
-          },
-          {
-            "id": 4,
-            "pregunta": "¿Con qué lo despertaron?",
-            "opciones": ["Un silbato", "Un grito", "Una bomba en la piscina"],
-            "respuestaCorrecta": 2
-          },
-          {
-            "id": 5,
-            "pregunta": "¿Qué prometió Julián después?",
-            "opciones": ["No volver a dormirse", "Cambiar de trabajo", "Llevar gafas nuevas"],
-            "respuestaCorrecta": 0
-          }
-        ]
+        "pregunta": "¿Qué ingrediente olvidó Lucía?",
+        "opciones": ["Huevos", "Polvo de hornear", "Azúcar"],
+        "respuestaCorrecta": 1
       }
-
-      
-      
-      
-      
-      
-      
-      
-      
-
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "El Pastor y la Tormenta",
+    "texto": "Ramón pastoreaba sus cabras en la sierra de Córdoba cuando vio nubes negras.\n—¡Viene tormenta! —gritó a su perro Luna.\nJuntos guiaron al rebaño hacia el refugio de piedra.\n\nPero una cabrita joven, Curiosa, se separó del grupo.\nRamón la encontró asustada bajo un alcornoque.\n—¡Vamos, pequeña! —dijo cargándola en sus brazos.\n\nJusto al entrar al refugio, empezó a llover torrencialmente.\nRamón secó a Curiosa con su manta.\n—Hoy aprendiste a no alejarte —susurró mientras las otras cabras masticaban tranquilamente su heno.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde pastoreaba Ramón?",
+        "opciones": ["En la playa", "En la sierra de Córdoba", "En un valle"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Cómo se llamaba su perro?",
+        "opciones": ["Truco", "Luna", "Fiel"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué animal se separó del grupo?",
+        "opciones": ["Un cordero", "La cabrita Curiosa", "El perro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Dónde encontró Ramón a la cabrita?",
+        "opciones": ["En un río", "Bajo un alcornoque", "En una cueva"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hizo Ramón al entrar al refugio?",
+        "opciones": ["Encendió fuego", "Secó a la cabrita", "Cocinó sopa"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "La Gallina Valiente",
+    "texto": "En una granja de Zagrilla vivía una gallina llamada Clotilde. Cada mañana ponía un huevo y cantaba orgullosa.\n\nUn día, el zorro entró al gallinero mientras todos dormían. Clotilde lo vio y cacareó tan fuerte que despertó al perro guardián.\n\n—¡Alerta, alerta! —gritaba Clotilde.\n\nEl perro corrió y espantó al zorro, que huyó asustado por el campo. Las otras gallinas aplaudieron a Clotilde con sus alas.\n\nDesde ese día, Clotilde fue considerada una heroína en la granja.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde vivía Clotilde?",
+        "opciones": ["En el bosque", "En una granja de Zagrilla", "En la ciudad"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hacía Clotilde cada mañana?",
+        "opciones": ["Salía a pasear", "Volaba", "Ponía un huevo y cantaba"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué animal entró al gallinero?",
+        "opciones": ["Un gato", "Un zorro", "Un lobo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo reaccionó Clotilde al ver al zorro?",
+        "opciones": ["Se escondió", "Salió volando", "Cacareó fuerte"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hicieron las otras gallinas después?",
+        "opciones": ["Aplaudieron con sus alas", "Corrieron al bosque", "Se durmieron"],
+        "respuestaCorrecta": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "La Costurera y el Pantalón Rebelde",
+    "texto": "Doña Berta era la mejor costurera del pueblo. Remendaba, cosía, bordaba... y también perdía las agujas con frecuencia.\n\nUna mañana llegó Don Eulogio con un pantalón roto de una manera misteriosa.\n—No pregunte cómo —dijo, rojo como un tomate.\n\nBerta se puso sus gafas, tomó hilo, y comenzó su arte. Pero cada vez que intentaba coser, el pantalón se le resbalaba de la mesa.\n\n—¡Este pantalón está embrujado! —exclamó.\n\nDespués de mucho esfuerzo, logró terminarlo. Don Eulogio se lo probó y sonrió.\n—¡Ahora sí puedo sentarme sin preocuparme!\n\n—O sin caerte del caballo —murmuró Berta, y ambos soltaron una carcajada.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué hacía Doña Berta?",
+        "opciones": ["Cocinaba pasteles", "Era costurera", "Vendía verduras"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Quién llevó un pantalón roto?",
+        "opciones": ["Don Eulogio", "Doña Clara", "Un niño del pueblo"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué hacía el pantalón mientras Berta lo cosía?",
+        "opciones": ["Se agrandaba solo", "Cambiaba de color", "Se resbalaba de la mesa"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué dijo Berta sobre el pantalón?",
+        "opciones": ["Está embrujado", "Está de moda", "Está muy limpio"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo terminó la historia?",
+        "opciones": ["Con un aplauso", "Con una discusión", "Con una carcajada"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "El Panadero y la Masa Rebelde",
+    "texto": "Don Fermín era el panadero más madrugador del barrio. Cada día, a las cinco en punto, empezaba a preparar su famosa masa secreta.\n\nUna mañana, mientras amasaba medio dormido, la masa salió disparada como una babosa veloz.\n—¡Vuelve aquí, masa escurridiza! —gritó Fermín, corriendo con el rodillo en mano.\n\nLa masa rebotó en el gato, pasó por debajo de la mesa y terminó pegada en el techo.\n\nDespués de mucho esfuerzo, logró bajarla y hornearla. Sorprendentemente, el pan salió delicioso.\n\n—Tiene un sabor... aventurero —dijo la clienta, relamiéndose.\n\nDesde entonces, Fermín la llamó “la baguette fugitiva”.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿A qué hora comenzaba Don Fermín a trabajar?",
+        "opciones": ["A las cinco en punto", "A las siete", "A las diez"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hizo la masa esa mañana?",
+        "opciones": ["Se quemó", "Se volvió invisible", "Salió disparada"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Dónde terminó la masa?",
+        "opciones": ["En la calle", "Pegada en el techo", "En el horno"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo quedó el pan al final?",
+        "opciones": ["Salado", "Delicioso", "Duro como piedra"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo llamó Fermín al pan?",
+        "opciones": ["La barra mágica", "La baguette fugitiva", "El pan dormilón"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "La Heladera y el Calorón",
+    "texto": "En pleno verano, Doña Tina vendía helados en la plaza del pueblo. Era famosa por su helado de sandía con menta.\n\nUn día, el sol pegaba tan fuerte que los conos se derretían antes de llegar a las manos de los niños.\n\n—¡Ay madre! ¡Esto parece sopa fría! —dijo Tina, mientras corría con la nevera portátil.\n\nDecidió servir los helados en vasos con pajita. Los niños estaban felices.\n\n—¡Ahora podemos beberlos! —gritaban mientras se refrescaban.\n\nDesde entonces, Doña Tina ofrecía “helados para beber” en los veranos.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué vendía Doña Tina?",
+        "opciones": ["Churros", "Helados", "Limonada"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Cómo era el clima ese día?",
+        "opciones": ["Lluvioso", "Muy caluroso", "Con viento fuerte"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué pasaba con los conos?",
+        "opciones": ["Se rompían", "Se derretían", "Salían volando"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué solución encontró Tina?",
+        "opciones": ["No vendió nada", "Usó vasos con pajita", "Puso los helados en cubos"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo llamaron los niños a los helados?",
+        "opciones": ["Sopa de frutas", "Helado para beber", "Licuado mágico"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "El Zapatero y la Sandalia Voladora",
+    "texto": "Don Cosme era zapatero y hablaba con sus zapatos mientras los arreglaba. Un día llegó una clienta con una sandalia rota.\n\n—Se me rompió en plena boda —dijo, mostrando la suela suelta.\n\nCosme, concentrado, aplicó pegamento, cosió... y de pronto, ¡la sandalia salió volando!\n\n—¡Es que lleva mucho ritmo! —bromeó.\n\nLa clienta rió tanto que decidió dejarle ambos zapatos para equilibrar la energía.\n\n—¡Y por si acaso, pégales bien las ganas de bailar!",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿A qué se dedicaba Don Cosme?",
+        "opciones": ["Era panadero", "Era zapatero", "Era bailarín"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué trajo la clienta?",
+        "opciones": ["Unos botines", "Una sandalia rota", "Un bolso viejo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué pasó mientras Cosme trabajaba?",
+        "opciones": ["La sandalia voló", "Se durmió", "Se quemó la suela"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué hizo la clienta al final?",
+        "opciones": ["Se enfadó", "Le dejó ambos zapatos", "Pidió un reembolso"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué comentario gracioso hizo Cosme?",
+        "opciones": ["¡Tiene alas!", "¡Es que lleva mucho ritmo!", "¡Zapato saltarín!"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "La Romería de la Abuela Cloti",
+    "texto": "Cada año, la abuela Cloti preparaba empanadas para la romería del pueblo. Este año decidió llevar cien, pero su nieto Mateo tropezó y cayó encima del cesto.\n\n—¡Ay mi espalda! —gritó Mateo.\n—¡Ay mis empanadas! —gritó Cloti.\n\nAunque llegaron un poco aplastadas, la gente decía:\n—¡Están más sabrosas que nunca!\n\nDesde entonces, las llamó “empanadas con cariño y pisotón”.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué preparaba la abuela Cloti para la romería?",
+        "opciones": ["Galletas", "Empanadas", "Tortillas"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Quién tropezó con el cesto?",
+        "opciones": ["El cura", "El nieto Mateo", "Un perro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Cómo quedaron las empanadas?",
+        "opciones": ["Aplastadas", "Quemadas", "Heladas"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué dijo la gente del sabor?",
+        "opciones": ["No tenían gusto", "Eran más sabrosas que nunca", "Sabían raro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo las llamó Cloti después?",
+        "opciones": ["Empanadas mágicas", "Empanadas de la suerte", "Empanadas con cariño y pisotón"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "titulo": "La Jardinera y el Girasol Bailarín",
+    "texto": "Lucía adoraba sus plantas, pero especialmente un girasol que siempre miraba al sol con exagerado entusiasmo.\n\nUn día de mucho viento, el girasol empezó a girar como trompo.\n—¡Ay madre, que me sale bailarín! —dijo Lucía.\n\nLe puso una cinta para sujetarlo, pero el girasol seguía girando cada vez que oía música.\n\nLos vecinos venían a verlo bailar con la radio. Y Lucía empezó a cobrar entrada:\n—¡Bienvenidos al show del girasol bailarín!",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué cuidaba Lucía con cariño?",
+        "opciones": ["Un rosal", "Un bonsái", "Un girasol"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué pasaba con el girasol cuando hacía viento?",
+        "opciones": ["Se caía", "Se marchitaba", "Giraba como un trompo"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué hacía el girasol cuando oía música?",
+        "opciones": ["Se ponía triste", "Dejaba de girar", "Seguía girando"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué hacían los vecinos?",
+        "opciones": ["Le traían agua", "Venían a verlo", "Lo regaban"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hizo Lucía con el espectáculo?",
+        "opciones": ["Lo ignoró", "Lo grabó", "Cobró entrada"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "titulo": "El Socorrista Dormilón",
+    "texto": "En la piscina municipal, Julián era el socorrista. Siempre atento... excepto justo después de almorzar.\n\nUna vez, se quedó dormido en su silla alta. Los niños lo vieron roncando con gafas de sol.\n\n—¡Está entrenando apnea en seco! —bromeó uno.\n\nLe dibujaron un bigote con crema solar y lo despertaron con una bomba en la piscina.\n\n—¡Estoy en alerta! —dijo sobresaltado, con el bigote blanco aún puesto.\n\nDesde ese día, Julián no volvió a dormirse… al menos no sin sombrilla.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde trabajaba Julián?",
+        "opciones": ["En la playa", "En la piscina municipal", "En un parque"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hacía después de comer?",
+        "opciones": ["Jugaba al fútbol", "Se dormía", "Leía cuentos"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué le dibujaron los niños?",
+        "opciones": ["Un bigote", "Un corazón", "Un tiburón"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Con qué lo despertaron?",
+        "opciones": ["Un silbato", "Un grito", "Una bomba en la piscina"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué prometió Julián después?",
+        "opciones": ["No volver a dormirse", "Cambiar de trabajo", "Llevar gafas nuevas"],
+        "respuestaCorrecta": 0
+      }
+    ]
+  }
 ]
