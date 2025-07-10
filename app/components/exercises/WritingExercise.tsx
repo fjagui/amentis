@@ -202,15 +202,7 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
               transition={{ duration: 0.3 }}
               className="space-y-6"
             >
-              {/* Sección destacada con icono de escritura */}
-              <div className="flex flex-col items-center bg-yellow-50 p-5 rounded-xl border-2 border-yellow-200 mb-6">
-                <div className="bg-yellow-100 p-4 rounded-full mb-4">
-                  <FaPencilAlt className="text-3xl text-yellow-600" />
-                </div>
-                <p className="text-center text-yellow-700 font-medium">
-                  Este ejercicio se realiza fuera de la aplicación
-                </p>
-              </div>
+              
               
               {/* Instrucción actual */}
               <div className="bg-blue-50 p-5 rounded-xl border border-blue-200">
@@ -229,7 +221,15 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
                   </p>
                 </div>
               </div>
-              
+              {/* Sección destacada con icono de escritura */}
+              <div className="flex flex-col items-center bg-yellow-50 p-5 rounded-xl border-2 border-yellow-200 mb-6">
+                <div className="bg-yellow-100 p-4 rounded-full mb-4">
+                  <FaPencilAlt className="text-3xl text-yellow-600" />
+                </div>
+                <p className="text-center text-yellow-700 font-medium">
+                  Este ejercicio se realiza fuera de la aplicación
+                </p>
+              </div>
               <div className="mt-8 flex justify-center">
                 <motion.button
                   onClick={handleNext}
