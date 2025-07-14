@@ -33,5 +33,12 @@
       "fecha": "25/1/1998",
       "pista": "Fecha de nacimiento de Carlos",
       "tipoFecha": "completa"
+    },
+    {
+      "id": 6,
+      "evento": "¿Qúe dia nació tu hija Chari?",
+      "fecha": "14/8/1968",
+      "pista": "Mes de verano y a mitad de mes",
+      "tipoFecha": "completa"
     }
   ]

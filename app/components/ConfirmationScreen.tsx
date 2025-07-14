@@ -18,7 +18,7 @@ export function ConfirmationScreen({
 
   const refranes = [
     "La sabiduría viene con los años, pero el aprendizaje es para toda la vida",
-   "Año de nieves, año de bienes.",
+    "Año de nieves, año de bienes.",
     "Cuando en marzo mayea, en mayo marcea.",
     "Lluvia en San Juan, quita vino y no da pan.",
     "Si quieres buen melonar, siembra en San Juan.",
@@ -31,7 +31,29 @@ export function ConfirmationScreen({
     "Donde hay confianza, da asco.",
     "No dejes camino viejo por vereda nueva.",
     "En casa del herrero, cuchillo de palo.",
-    "El que mucho abarca, poco aprieta."
+    "El que mucho abarca, poco aprieta.",
+    "Al mal tiempo, buena cara",
+"No hay mal que por bien no venga",
+"Cuando el río suena, agua lleva",
+"Camarón que se duerme, se lo lleva la corriente",
+"Cada quien cosecha lo que siembra",
+"Después de la tormenta, siempre llega la calma",
+"El diablo sabe por viejo, no por diablo",
+"La experiencia es la madre de la ciencia",
+"A viejo león, no le enseñes mañas",
+"Más vale maña que fuerza",
+"Quien mucho duerme, poco aprende",
+"No por mucho madrugar amanece más temprano",
+"A quien madruga, Dios lo ayuda",
+"En abril, aguas mil",
+"Hasta el cuarenta de mayo, no te quites el sayo",
+"Agua de mayo, pan para todo el año",
+"Cría cuervos y te sacarán los ojos",
+"El pez por la boca muere",
+"Quien mucho habla, mucho yerra",
+"Más vale prevenir que curar",
+"Ojos que no ven, corazón que no siente",
+"En boca cerrada no entran moscas",
   ];
 
   const saludos = [
@@ -108,7 +130,7 @@ export function ConfirmationScreen({
             <div className="w-full border-t border-blue-200"></div>
           </div>
           <div className="relative px-4">
-            <span className="px-4 bg-white text-lg italic text-gray-700">
+            <span className="px-4 bg-white text-xl font-bold italic text-gray-700">
               "{refran}"
             </span>
           </div>
@@ -139,7 +161,7 @@ export function ConfirmationScreen({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.5 } }}
         >
-          ¡Tu mente te lo agradecerá!
+          ¡Recuerda volver mañana!
         </motion.div>
       </div>
     </motion.div>
