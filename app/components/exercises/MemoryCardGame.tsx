@@ -186,7 +186,7 @@ const JuegoDeParejas = ({ onComplete }: { onComplete: () => void }) => {
           <motion.div
             key={card.id}
             onClick={() => handleCardClick(card.id)}
-            className={`w-24 h-24 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ${
+            className={`w-32 h-32 rounded-xl cursor-pointer shadow-lg transition-all duration-300 ${
               card.isFlipped || card.isMatched 
                 ? "bg-white" 
                 : "bg-blue-500 hover:bg-blue-600"

@@ -157,7 +157,7 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <span className="text-2xl font-bold text-white drop-shadow-md">{numero}</span>
+                <span className="text-6xl font-bold text-white drop-shadow-md">{numero}</span>
               </motion.div>
             ))}
           </div>

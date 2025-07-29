@@ -19,7 +19,7 @@ export const MonthKeyboard = ({ onMonthSelect }: { onMonthSelect: (monthNumber: 
         <button
           key={month}
           value={(index + 1).toString()} // ¡Importante: debe ser string!
-          className="p-4 text-lg bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
+          className="p-8 text-lg bg-white border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
         >
           {month}
         </button>

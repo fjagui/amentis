@@ -91,7 +91,7 @@ export default function ExerciseManager() {
       />, 
       duration: 120 
     },
-    { 
+    /*{ 
       title: 'Recuerda la secuencia',
       component: <RecuerdaSecuencia 
         onComplete={() => {
@@ -101,7 +101,7 @@ export default function ExerciseManager() {
         }}
       />, 
       duration: 120 
-    },
+    },*/
     { 
       title: 'Resuelve las operaciones',
       component: <MathExercise 

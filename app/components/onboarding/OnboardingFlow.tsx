@@ -85,8 +85,10 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
             </h2>
           </div>
 
+
           {/* Barra de progreso */}
-          {step > 1 && step < 5 && (
+          
+          {/*step > 1 && step < 5 && (
             <div className="mb-8">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm font-medium text-blue-700">
@@ -103,7 +105,8 @@ export default function OnboardingFlow({ onComplete }: { onComplete: () => void 
                 />
               </div>
             </div>
-          )}
+          )*/}
+        
 
           {/* Pasos del onboarding */}
           <div className="space-y-8">

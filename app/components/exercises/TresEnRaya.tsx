@@ -187,7 +187,7 @@ const TresEnRaya = ({ onComplete }: { onComplete: () => void }) => {
       <motion.div
         key={indice}
         onClick={() => hacerMovimiento(indice)}
-        className={`w-24 h-24 rounded-xl cursor-pointer shadow-lg flex items-center justify-center text-5xl font-bold ${
+        className={`w-32 h-32 rounded-xl cursor-pointer shadow-lg flex items-center justify-center text-5xl font-bold ${
           tablero[indice] === "X" 
             ? "bg-blue-500 text-white" 
             : tablero[indice] === "O" 

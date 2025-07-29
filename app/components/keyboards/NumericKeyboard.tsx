@@ -15,7 +15,7 @@ export const NumericKeyboard = ({
         <button
           key={num}
           value={num.toString()}
-          className="p-4 text-3xl bg-blue-100 hover:bg-blue-200 rounded-lg"
+          className="p-4 text-4xl bg-blue-100 hover:bg-blue-200 rounded-lg"
           // ¡No usar onClick aquí!
         >
           {num}

@@ -25,16 +25,16 @@ export default function MonthStep({
 
       {/* Input + Botón de validación */}
       <div className="flex gap-3 items-center">
-        <div className="flex-1 p-4 text-2xl border-2 border-blue-200 rounded-lg bg-white min-h-[60px]">
-          {selectedMonth ? months[parseInt(selectedMonth) - 1] : 'Mes'}
+        <div className="flex-1 p-4 text-4xl border-2 border-blue-200 rounded-lg  font-bold bg-white min-h-[60px]">
+          {selectedMonth ? months[parseInt(selectedMonth) - 1] : ''}
         </div>
-        <ButtonWithSound
+        <button
           onClick={() => onNext(selectedMonth)}
           disabled={!selectedMonth}
-          className="p-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
-        >
-          <FaCheck size={24} />
-        </ButtonWithSound>
+          className="flex-shrink-0 p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition disabled:opacity-50 shadow-lg"
+          >
+          <FaCheck size={32} />
+        </button>
       </div>
 
       {/* Teclado de meses con ButtonWithSound */}
@@ -43,7 +43,7 @@ export default function MonthStep({
           <ButtonWithSound
             key={month}
             onClick={() => setSelectedMonth((index + 1).toString())}
-            className={`p-4 text-xl text-center rounded-lg transition ${
+            className={`p-2 text-3xl text-center rounded-lg transition ${
               selectedMonth === (index + 1).toString()
                 ? 'bg-blue-600 text-white'
                 : 'bg-blue-100 hover:bg-blue-200'

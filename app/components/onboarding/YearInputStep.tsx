@@ -40,8 +40,8 @@ export default function YearInputStep({
 
         <div className="flex items-center gap-3">
           {/* Input visual */}
-          <div className="flex-1 p-4 text-3xl border-2 border-blue-200 rounded-lg min-h-[60px]">
-            {year || <span className="text-gray-400">Año</span>}
+          <div className="flex-1 p-4 text-4xl border-2 border-blue-200 font-bold rounded-lg min-h-[60px]">
+            {year || <span className="text-gray-400"></span>}
           </div>
 
           {/* Botón de validación */}
@@ -49,8 +49,8 @@ export default function YearInputStep({
               onClick={handleSubmit}
             disabled={!year.trim()}
             className="flex-shrink-0 p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition disabled:opacity-50 shadow-lg"
-          >
-            <FaCheck size={24} />
+            >
+              <FaCheck size={32} />
           </button>
         </div>
       </div>

@@ -93,12 +93,12 @@ const ReadingComprehension = ({ onComplete }: { onComplete: () => void }) => {
           animate={{ opacity: 1, y: 0 }}
           className="w-full max-w-3xl p-8 mb-6 rounded-xl border-4 border-gray-300 bg-white shadow-lg"
         >
-          <div className="text-sm text-gray-500 mb-2">
+          {/**<div className="text-sm text-gray-500 mb-2">
             Historia del día {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
-          </div>
+          </div>**/}
           <h2 className="text-3xl font-bold text-gray-700 mb-4">{historiaActual.titulo}</h2>
           <div
-            className="text-xl text-gray-800 leading-relaxed"
+            className="font-roboto text-2xl text-gray-900 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: textoConSaltos }}
           />
         </motion.div>
