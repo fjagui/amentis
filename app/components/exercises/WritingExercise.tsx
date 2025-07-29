@@ -12,7 +12,7 @@ interface Instruction {
 // Almacenamiento para historial de ejercicios
 const EXERCISE_HISTORY_KEY = "exerciseHistory";
 const MAX_HISTORY_SIZE = 15; // Mantener un historial razonable
-const EXERCISES_TO_SHOW = 3;
+const EXERCISES_TO_SHOW = 2;
 
 // Función para obtener ejercicios evitando repeticiones recientes
 const getNonRepeatingExercises = (
@@ -171,7 +171,7 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
           </p>
         </div>
         
-        {/* Progreso */}
+        {/* Progreso 
         <div className="px-6 py-4 bg-blue-50">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-blue-700">
@@ -210,7 +210,7 @@ const WritingExercise = ({ onComplete }: { onComplete: () => void }) => {
                   {instructions[currentInstruction].title}
                 </h2>
                 
-                <div className="text-xl text-gray-700 mb-6 bg-white p-6 rounded-lg border-4 border-blue-300 shadow-md">
+                <div className="text-4xl text-gray-700 mb-6 bg-white p-6 rounded-lg border-4 border-blue-300 shadow-md">
   {instructions[currentInstruction].description}
 </div>
                 
