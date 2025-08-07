@@ -1,44 +1,181 @@
 [
     {
       "id": 1,
-      "evento": "¿Qúe dia nació tu hija Mari?",
+      "evento": "¿Qué día nació tu hija Mari?",
       "fecha": "7/9/1962",
       "pista": "",
       "tipoFecha": "completa"
     },
+
     {
       "id": 2,
+      "evento": "¿Qué día nació tu hijo Joseito?",
+      "fecha": "2/8/1966",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 3,
+      "evento": "¿Qué día nació tu hija Chari?",
+      "fecha": "14/8/1968",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 4,
+      "evento": "¿Qué día nació tu hija Maria de los Ángeles?",
+      "fecha": "14/3/1970",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 5,
+      "evento": "¿Qué día nació tu hijo Manuel?",
+      "fecha": "2/10/1971",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 6,
+      "evento": "¿Qúe día nació tu hijo Miguel Ángel?",
+      "fecha": "30/1/1973",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 7,
+      "evento": "¿Qué dia nació tu hijo Diego?",
+      "fecha": "2/12/1974",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 8,
+      "evento": "¿Qué día nació tu hijo Antonio?",
+      "fecha": "31/12/1975",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 9,
+      "evento": "¿Qué día nació tu hijo Pablo?",
+      "fecha": "17/5/1979",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 10,
+      "evento": "¿Qué día nació tu marido?",
+      "fecha": "30/12/1936",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 11,
+      "evento": "¿Qué día nacistes?",
+      "fecha": "26/3/1939",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 12,
+      "evento": "¿Qué día nacio tu nieto Juan?",
+      "fecha": "27/10/1995",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 13,
+      "evento": "¿Qué día nacio tu nieta María hija de María?",
+      "fecha": "23/12/2001",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 14,
+      "evento": "¿Cuándo nació tu nieto Carlos?",
+      "fecha": "25/1/1998",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+    {
+      "id": 15,
+      "evento": "¿Cuándo nació tu nieta Irene?",
+      "fecha": "17/2/1999",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+    {
+      "id": 16,
+      "evento": "¿Cuándo nació tu nieta Marta?",
+      "fecha": "11/9/2004",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 17,
+      "evento": "¿Cuándo nació tu nieto Manuel?",
+      "fecha": "20/3/2008",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+
+    {
+      "id": 18,
+      "evento": "¿Cuándo nació tu nieta María hija de Manolo?",
+      "fecha": "13/12/2015",
+      "pista": "",
+      "tipoFecha": "completa"
+    },
+ 
+    {
+      "id": 19,
       "evento": "Día de Reyes",
       "fecha": "6/1",
       "pista": "Celebración cristiana que conmemora la visita de los Reyes Magos al Niño Jesús",
       "tipoFecha": "mes-dia"
     },
     {
-      "id": 3,
+      "id": 20,
       "evento": "Cuándo se celebra la Navidad",
       "fecha": "25/12",
       "pista": "Navidad",
       "tipoFecha": "mes-dia"
     },
     {
-      "id": 4,
+      "id": 21,
       "evento": "¿Cuándo se celebra el día de San José?",
       "fecha": "19/3",
       "pista": "",
       "tipoFecha": "mes-dia"
     },
+
     {
-      "id": 5,
-      "evento": "¿Cuándo nació tu nieto Carlos?",
-      "fecha": "25/1/1998",
-      "pista": "Fecha de nacimiento de Carlos",
+      "id": 22,
+      "evento": "¿En qué fecha fue tu boda?",
+      "fecha": "25/12/1961",
+      "pista": "",
       "tipoFecha": "completa"
     },
     {
-      "id": 6,
-      "evento": "¿Qúe dia nació tu hija Chari?",
-      "fecha": "14/8/1968",
-      "pista": "Mes de verano y a mitad de mes",
-      "tipoFecha": "completa"
+      "id": 23,
+      "evento": "¿Cuándo se celebra el día de Andalucía?",
+      "fecha": "28/2",
+      "pista": "",
+      "tipoFecha": "mes-dia"
     }
+   
   ]

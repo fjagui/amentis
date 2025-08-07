@@ -12,6 +12,7 @@ import JuegoTangram from './TangramGame';
 import GuessTheDateGame from './GuessTheDateGame';
 import WritingExercise from './WritingExercise';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import VasosExercise from './VasosExercise';
 
 type ExerciseComponent = {
   title: string;
@@ -28,6 +29,8 @@ export default function ExerciseManager() {
   const menuRef = useRef<HTMLDivElement>(null);
   const [currentGame, setCurrentGame] = useState<number>(0);
   const exercises: ExerciseComponent[] = [
+    
+
     { 
       title: 'Tres en Raya',
       component: <TresEnRaya 
@@ -123,7 +126,18 @@ export default function ExerciseManager() {
         }} 
       />, 
       duration: 120 
-    }
+    },
+    { 
+      title:'Vasos de colores',
+      component: <VasosExercise 
+        onComplete={() => {
+          setProgress(75);
+          setExerciseCompleted(true);
+          setShowTransition(true);
+        }} 
+      />, 
+      duration: 120 
+    },
   ];
 
   const nextExercise = () => {

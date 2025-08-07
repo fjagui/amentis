@@ -77,9 +77,7 @@ useEffect(() => {
           setCurrentExercise(currentExercise + 1);
           setIsCorrect(null);
         }, 2000);
-      } else {
-        alert("¡Has completado los 10 ejercicios!");
-      }
+      } 
     } else {
       setIsCorrect(false);
       incorrecto.play();
