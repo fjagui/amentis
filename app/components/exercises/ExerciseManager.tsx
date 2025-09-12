@@ -7,12 +7,16 @@ import Layout from '../Layout';
 import { ExerciseTransition } from './ExerciseTransition';
 import MemoryCardGame from './MemoryCardGame';
 import JuegoGlobos from './JuegoGlobos';
+import SudokuGame from './SudokuGame';
 import TresEnRaya from './TresEnRaya';
 import JuegoTangram from './TangramGame';
 import GuessTheDateGame from './GuessTheDateGame';
 import WritingExercise from './WritingExercise';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import VasosExercise from './VasosExercise';
+import Buscaminas from './BuscaMinas';
+import PatternRecognitionGame from './PatternRecognitionGame';
+import WordSearchGame from './WordSearchGame';
 
 type ExerciseComponent = {
   title: string;
@@ -20,7 +24,36 @@ type ExerciseComponent = {
   duration: number;
 };
 
-export default function ExerciseManager() {
+interface ExerciseConfig {
+  title: string;
+  componentName: string;
+  duration: number;
+  minLevel: number;
+}
+
+// Mapeo de nombres de componentes a componentes reales
+const componentMap: { [key: string]: React.ComponentType<any> } = {
+  RecuerdaSecuencia,
+  MathExercise,
+  ReadingComprehension,
+  MemoryCardGame,
+  JuegoGlobos,
+  TresEnRaya,
+  GuessTheDateGame,
+  WritingExercise,
+  VasosExercise,
+  Buscaminas,
+  SudokuGame,
+  PatternRecognitionGame,
+  WordSearchGame,
+  JuegoTangram
+};
+
+interface ExerciseManagerProps {
+  userLevel: number;
+}
+
+export default function ExerciseManager({ userLevel }: ExerciseManagerProps) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [exerciseCompleted, setExerciseCompleted] = useState(false);
@@ -28,122 +61,118 @@ export default function ExerciseManager() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const [currentGame, setCurrentGame] = useState<number>(0);
-  const exercises: ExerciseComponent[] = [
-    
+  const [exercises, setExercises] = useState<ExerciseComponent[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [isUserLevelLoaded, setIsUserLevelLoaded] = useState(false);
 
-    { 
-      title: 'Tres en Raya',
-      component: <TresEnRaya 
-        onComplete={() => {
-          // Incrementar contador de partidas
-          setCurrentGame(prev => prev + 1);
+  // Verificar cuando userLevel esté disponible
+  useEffect(() => {
+    if (typeof userLevel === 'number') {
+      setIsUserLevelLoaded(true);
+    } else {
+      console.error('userLevel is not a number:', userLevel);
+    }
+  }, [userLevel]);
+
+  // Cargar ejercicios desde el JSON externo
+  useEffect(() => {
+    if (!isUserLevelLoaded) return;
+
+    const loadExercises = async () => {
+      try {
+        setError(null);
+        setLoading(true);
+        
+        const response = await fetch('/exercises.json');
+        
+        if (!response.ok) {
+          throw new Error(`Error al cargar ejercicios: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
+        // Verificar que data.exercises existe y es un array
+        if (!data.exercises || !Array.isArray(data.exercises)) {
+          throw new Error('Formato inválido en exercises.json');
+        }
+        
+        console.log('Exercises loaded:', data.exercises);
+        console.log('User level:', userLevel);
+        
+        // Filtrar ejercicios por nivel del usuario
+        const filteredExercises = data.exercises.filter((exercise: ExerciseConfig) => 
+          exercise.minLevel <= userLevel
+        );
+        
+        console.log('Filtered exercises:', filteredExercises);
+        
+        if (filteredExercises.length === 0) {
+          setError(`No hay ejercicios disponibles para el nivel ${userLevel}`);
+          setExercises([]);
+          setLoading(false);
+          return;
+        }
+        
+        const exerciseComponents: ExerciseComponent[] = filteredExercises.map((exercise: ExerciseConfig) => {
+          const Component = componentMap[exercise.componentName];
           
-          // Si se han jugado 3 partidas, completar el ejercicio
-          if (currentGame >= 2) {
-            setProgress(75);
-            setExerciseCompleted(true);
-            setShowTransition(true);
-            setCurrentGame(0); // Reiniciar contador para la próxima vez
+          if (!Component) {
+            console.error(`Componente ${exercise.componentName} no encontrado en componentMap`);
+            return null;
           }
-        }} 
-      />, 
-      duration: 120 
-    },   
+          
+          // Crear el componente con la lógica de onComplete correspondiente
+          let component;
+          
+          if (exercise.componentName === 'Buscaminas' || exercise.componentName === 'TresEnRaya') {
+            component = <Component 
+              onComplete={() => {
+                setCurrentGame(prev => {
+                  const newCount = prev + 1;
+                  if (newCount >= 2) {
+                    setProgress(prevProgress => prevProgress + (100 / filteredExercises.length));
+                    setExerciseCompleted(true);
+                    setShowTransition(true);
+                    return 0; // Reiniciar contador
+                  }
+                  return newCount;
+                });
+              }} 
+            />;
+          } else {
+            component = <Component 
+              onComplete={() => {
+                setProgress(prev => prev + (100 / filteredExercises.length));
+                setExerciseCompleted(true);
+                setShowTransition(true);
+              }} 
+            />;
+          }
+          
+          return {
+            title: exercise.title,
+            component: component,
+            duration: exercise.duration
+          };
+        }).filter(Boolean) as ExerciseComponent[];
+        
+        setExercises(exerciseComponents);
+      } catch (error) {
+        console.error('Error loading exercises:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Error desconocido al cargar ejercicios';
+        setError(`Error al cargar ejercicios: ${errorMessage}`);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    { 
-      title:'Adivina la fecha',
-      component: <GuessTheDateGame 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-    { 
-      title:'Explota los globos',
-      component: <JuegoGlobos 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-    { 
-      title:'Memoria',
-      component: <MemoryCardGame 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-    { 
-      title:'Lectura',
-      component: <ReadingComprehension 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-    /*{ 
-      title: 'Recuerda la secuencia',
-      component: <RecuerdaSecuencia 
-        onComplete={() => {
-          setProgress(25);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }}
-      />, 
-      duration: 120 
-    },*/
-    { 
-      title: 'Resuelve las operaciones',
-      component: <MathExercise 
-        onComplete={() => {
-          setProgress(50);
-          setShowTransition(true);
-          setExerciseCompleted(true);
-        }}
-      />, 
-      duration: 120 
-    },
-    { 
-      title:'Escribe en tu cuaderno',
-      component: <WritingExercise 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-    { 
-      title:'Vasos de colores',
-      component: <VasosExercise 
-        onComplete={() => {
-          setProgress(75);
-          setExerciseCompleted(true);
-          setShowTransition(true);
-        }} 
-      />, 
-      duration: 120 
-    },
-  ];
+    loadExercises();
+  }, [currentGame, userLevel, isUserLevelLoaded]);
 
   const nextExercise = () => {
     if (currentExerciseIndex < exercises.length - 1) {
       setCurrentExerciseIndex(prev => prev + 1);
-      setProgress(((currentExerciseIndex + 1) / exercises.length) * 100);
       setShowTransition(false);
       setExerciseCompleted(false);
     } else {
@@ -180,6 +209,37 @@ export default function ExerciseManager() {
     };
   }, []);
 
+  // Mostrar loading mientras se obtiene userLevel
+  if (typeof userLevel !== 'number') {
+    return (
+      <Layout currentProgress={progress}>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-xl">Cargando información del usuario...</div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (loading) {
+    return (
+      <Layout currentProgress={progress}>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-xl">Cargando ejercicios...</div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (error) {
+    return (
+      <Layout currentProgress={progress}>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-xl text-red-600">{error}</div>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout currentProgress={progress}>
       {/* Menú de navegación */}
@@ -198,6 +258,7 @@ export default function ExerciseManager() {
           >
             <div className="bg-blue-600 p-4">
               <h3 className="text-xl font-bold text-white">Menú de Ejercicios</h3>
+              <p className="text-blue-100 text-sm">Nivel: {userLevel}</p>
             </div>
             <ul className="py-2 max-h-80 overflow-y-auto">
               {exercises.map((exercise, index) => (
@@ -228,14 +289,14 @@ export default function ExerciseManager() {
           totalExercises={exercises.length}
           onContinue={nextExercise}
           onReplay={replayExercise}
-          exerciseName={exercises[currentExerciseIndex].title}
+          exerciseName={exercises[currentExerciseIndex]?.title || ''}
         />
       ) : (
         <div className="exercise-container">
           <h1 className="text-3xl font-bold text-center mb-8">
-            {exercises[currentExerciseIndex].title}
+            {exercises[currentExerciseIndex]?.title || 'Ejercicio no disponible'}
           </h1>
-          {exercises[currentExerciseIndex].component}
+          {exercises[currentExerciseIndex]?.component || <div>Ejercicio no disponible</div>}
         </div>
       )}
     </Layout>

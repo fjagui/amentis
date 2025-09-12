@@ -1,15 +1,22 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Howl } from "howler";
 import { AnimatePresence, motion } from "framer-motion";
+import { useUser } from "../../contexts/UserContext"; // Ajusta la ruta según tu estructura
 
 // Sonidos para el juego
 const sonidoAcierto = new Howl({ src: ["/sounds/green.mp3"] });
 const sonidoError = new Howl({ src: ["/sounds/red.mp3"] });
 const sonidoPop = new Howl({ src: ["/sounds/pop.mp3"] });
 
+interface ElementoJuego {
+  valor: number;
+  display: string;
+}
+
 const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
-  const [numeros, setNumeros] = useState<number[]>([]);
+  const { user } = useUser();
+  const [elementos, setElementos] = useState<ElementoJuego[]>([]);
   const [modo, setModo] = useState<"asc" | "desc">("asc");
   const [feedback, setFeedback] = useState<string>("");
   const [juegoCompletado, setJuegoCompletado] = useState(false);
@@ -17,23 +24,76 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
   const [mostrarInstrucciones, setMostrarInstrucciones] = useState(true);
   const [ultimoCorrecto, setUltimoCorrecto] = useState<number | null>(null);
 
-  const generarNumerosAleatorios = () => {
-    const nums = new Set<number>();
-    while (nums.size < 10) {
-      nums.add(Math.floor(Math.random() * 100) + 1);
+  // Obtener nivel de dificultad del usuario (1 o 2)
+  const dificultad = user?.level || 1;
+
+  const generarElementosAleatorios = () => {
+    if (dificultad === 1) {
+      // Dificultad 1: Números simples
+      const nums = new Set<number>();
+      while (nums.size < 10) {
+        nums.add(Math.floor(Math.random() * 100) + 1);
+      }
+      return Array.from(nums).map(num => ({ valor: num, display: num.toString() }));
+    } else {
+      // Dificultad 2: Operaciones aritméticas
+      const elementos: ElementoJuego[] = [];
+      const operadores = ['+', '-', '*'];
+      
+      while (elementos.length < 10) {
+        const a = Math.floor(Math.random() * 20) + 1;
+        const b = Math.floor(Math.random() * 10) + 1;
+        const operador = operadores[Math.floor(Math.random() * operadores.length)];
+        
+        let valor, display;
+        
+        switch (operador) {
+          case '+':
+            valor = a + b;
+            display = `${a} + ${b}`;
+            break;
+          case '-':
+            // Asegurar que el resultado no sea negativo
+            valor = Math.max(a, b) - Math.min(a, b);
+            display = `${Math.max(a, b)} - ${Math.min(a, b)}`;
+            break;
+          case '*':
+            valor = a * b;
+            display = `${a} × ${b}`;
+            break;
+          default:
+            valor = a + b;
+            display = `${a} + ${b}`;
+        }
+        
+        // Asegurar que el resultado no exceda 100 y no se repita
+        if (valor <= 100 && !elementos.some(e => e.valor === valor)) {
+          elementos.push({ valor, display });
+        }
+      }
+      
+      return elementos;
     }
-    return Array.from(nums);
   };
 
   const iniciarJuego = () => {
-    const nuevosNumeros = generarNumerosAleatorios();
-    setNumeros(nuevosNumeros);
+    const nuevosElementos = generarElementosAleatorios();
+    setElementos(nuevosElementos);
     const nuevoModo = Math.random() > 0.5 ? "asc" : "desc";
     setModo(nuevoModo);
     setGlobosExplotados([]);
-    setFeedback(nuevoModo === "asc" 
-      ? "Selecciona el número más pequeño" 
-      : "Selecciona el número más grande");
+    
+    // Mensaje según dificultad
+    if (dificultad === 1) {
+      setFeedback(nuevoModo === "asc" 
+        ? "Selecciona el número más pequeño" 
+        : "Selecciona el número más grande");
+    } else {
+      setFeedback(nuevoModo === "asc" 
+        ? "Selecciona el resultado más pequeño" 
+        : "Selecciona el resultado más grande");
+    }
+    
     setJuegoCompletado(false);
     setUltimoCorrecto(null);
     setMostrarInstrucciones(false);
@@ -41,25 +101,25 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
 
   useEffect(() => {
     iniciarJuego();
-  }, []);
+  }, [dificultad]); // Reiniciar juego cuando cambia la dificultad
 
-  const explotarGlobo = (numero: number) => {
-    if (globosExplotados.includes(numero) || juegoCompletado) return;
+  const explotarGlobo = (valor: number) => {
+    if (globosExplotados.includes(valor) || juegoCompletado) return;
 
     sonidoPop.play();
 
-    const disponibles = numeros.filter(n => !globosExplotados.includes(n));
+    const disponibles = elementos.filter(e => !globosExplotados.includes(e.valor));
     const esCorrecto = 
-      (modo === "asc" && numero === Math.min(...disponibles)) ||
-      (modo === "desc" && numero === Math.max(...disponibles));
+      (modo === "asc" && valor === Math.min(...disponibles.map(e => e.valor))) ||
+      (modo === "desc" && valor === Math.max(...disponibles.map(e => e.valor)));
 
     if (esCorrecto) {
       sonidoAcierto.play();
-      const nuevosExplotados = [...globosExplotados, numero];
+      const nuevosExplotados = [...globosExplotados, valor];
       setGlobosExplotados(nuevosExplotados);
-      setUltimoCorrecto(numero);
+      setUltimoCorrecto(valor);
 
-      if (nuevosExplotados.length === numeros.length) {
+      if (nuevosExplotados.length === elementos.length) {
         setFeedback("¡Felicidades! Completaste el juego 🎉");
         setJuegoCompletado(true);
         onComplete();
@@ -69,28 +129,41 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
     } else {
       sonidoError.play();
       const objetivoActual = modo === "asc" 
-        ? Math.min(...disponibles) 
-        : Math.max(...disponibles);
+        ? Math.min(...disponibles.map(e => e.valor)) 
+        : Math.max(...disponibles.map(e => e.valor));
       
       if (modo === "asc") {
-        setFeedback(numero < objetivoActual 
-          ? "❌ Número incorrecto (muy bajo)" 
-          : "❌ Número incorrecto (muy alto)");
+        setFeedback(valor < objetivoActual 
+          ? "❌ Incorrecto (muy bajo)" 
+          : "❌ Incorrecto (muy alto)");
       } else {
-        setFeedback(numero > objetivoActual 
-          ? "❌ Número incorrecto (muy alto)" 
-          : "❌ Número incorrecto (muy bajo)");
+        setFeedback(valor > objetivoActual 
+          ? "❌ Incorrecto (muy alto)" 
+          : "❌ Incorrecto (muy bajo)");
       }
     }
   };
 
-  const getColorGlobo = (numero: number) => {
+  const getColorGlobo = (index: number) => {
     const colores = [
       "bg-red-400", "bg-blue-400", "bg-green-400", "bg-yellow-400",
       "bg-purple-400", "bg-pink-400", "bg-indigo-400", "bg-teal-400",
       "bg-orange-400", "bg-cyan-400"
     ];
-    return colores[numeros.indexOf(numero) % colores.length];
+    return colores[index % colores.length];
+  };
+
+  // Obtener texto para instrucciones según dificultad
+  const getTextoInstrucciones = () => {
+    if (dificultad === 1) {
+      return modo === "asc" 
+        ? "CRECIENTE (del menor al mayor)" 
+        : "DECRECIENTE (del mayor al menor)";
+    } else {
+      return modo === "asc" 
+        ? "CRECIENTE (del resultado menor al mayor)" 
+        : "DECRECIENTE (del resultado mayor al menor)";
+    }
   };
 
   return (
@@ -103,11 +176,10 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
         >
           <h2 className="text-2xl font-bold mb-4 text-blue-600">Instrucciones</h2>
           <p className="mb-4">
-            Explota los globos en orden {modo === "asc" 
-              ? "CRECIENTE (del menor al mayor)" 
-              : "DECRECIENTE (del mayor al menor)"}
+            Explota los globos en orden {getTextoInstrucciones()}
           </p>
           <p className="mb-4">
+            {dificultad === 2 && "Resuelve mentalmente las operaciones y ordena por su resultado. "}
             El juego te indicará si tu selección es correcta o no.
           </p>
           <motion.button
@@ -122,9 +194,14 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
       ) : (
         <>
           <div className="text-center w-full">
-            <h1 className="text-3xl font-bold text-blue-600 mb-2">Ordena los Números</h1>
+            <h1 className="text-3xl font-bold text-blue-600 mb-2">
+              {dificultad === 1 ? "Ordena los Números" : "Ordena las Operaciones"}
+            </h1>
             <div className="text-xl font-semibold mb-6">
               Modo: {modo === "asc" ? "Ascendente (⬆)" : "Descendente (⬇)"}
+              <span className="ml-4 text-lg text-gray-600">
+                Nivel: {dificultad}
+              </span>
             </div>
             
             {/* Área fija para el feedback */}
@@ -140,24 +217,26 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 w-full max-w-2xl">
-            {numeros.map((numero) => (
+            {elementos.map((elemento, index) => (
               <motion.div
-                key={numero}
-                onClick={() => explotarGlobo(numero)}
+                key={elemento.valor}
+                onClick={() => explotarGlobo(elemento.valor)}
                 initial={{ scale: 1 }}
                 animate={{
-                  scale: globosExplotados.includes(numero) ? 0 : 1,
-                  opacity: globosExplotados.includes(numero) ? 0 : 1
+                  scale: globosExplotados.includes(elemento.valor) ? 0 : 1,
+                  opacity: globosExplotados.includes(elemento.valor) ? 0 : 1
                 }}
                 transition={{ type: "spring", damping: 10 }}
-                className={`${getColorGlobo(numero)} w-full aspect-square rounded-full 
+                className={`${getColorGlobo(index)} w-full aspect-square rounded-full 
                   flex items-center justify-center cursor-pointer shadow-xl
-                  ${globosExplotados.includes(numero) ? "hidden" : ""}
+                  ${globosExplotados.includes(elemento.valor) ? "hidden" : ""}
                   hover:brightness-110 transition-all border-2 border-white`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <span className="text-6xl font-bold text-white drop-shadow-md">{numero}</span>
+                <span className="text-4xl font-bold text-white drop-shadow-md text-center">
+                  {elemento.display}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -166,10 +245,10 @@ const JuegoOrdenNumeros = ({ onComplete }: { onComplete: () => void }) => {
             <div className="text-xl font-semibold bg-white px-6 py-3 rounded-full shadow-md">
               {ultimoCorrecto !== null 
                 ? `Último correcto: ${ultimoCorrecto}` 
-                : "Selecciona el primer número"}
+                : "Selecciona el primer elemento"}
             </div>
             <div className="text-xl font-semibold bg-white px-6 py-3 rounded-full shadow-md">
-              Globos restantes: {numeros.length - globosExplotados.length}
+              Globos restantes: {elementos.length - globosExplotados.length}
             </div>
 
             <div className="flex gap-6">

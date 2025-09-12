@@ -1,0 +1,76 @@
+{
+  "exercises": [
+    {
+      "title": "Sopa de letras",
+      "componentName": "WordSearchGame",
+      "duration": 190,
+      "minLevel": 2
+    },
+    {
+      "title": "Marca la muestra",
+      "componentName": "PatternRecognitionGame",
+      "duration": 190,
+      "minLevel": 1
+    },
+    {
+      "title": "Sudokus",
+      "componentName": "SudokuGame",
+      "duration": 190,
+      "minLevel": 2
+    },
+    {
+      "title": "Busca Minas",
+      "componentName": "Buscaminas",
+      "duration": 190,
+      "minLevel": 2
+    },
+    {
+      "title": "Tres en Raya",
+      "componentName": "TresEnRaya", 
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Adivina la fecha",
+      "componentName": "GuessTheDateGame",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Explota los globos",
+      "componentName": "JuegoGlobos",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Memoria",
+      "componentName": "MemoryCardGame",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Lectura",
+      "componentName": "ReadingComprehension",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Resuelve las operaciones",
+      "componentName": "MathExercise",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Escribe en tu cuaderno",
+      "componentName": "WritingExercise",
+      "duration": 120,
+      "minLevel": 1
+    },
+    {
+      "title": "Vasos de colores",
+      "componentName": "VasosExercise",
+      "duration": 120,
+      "minLevel": 1
+    }
+  ]
+}

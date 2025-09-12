@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function ConfirmationScreen({ 
@@ -33,27 +32,27 @@ export function ConfirmationScreen({
     "En casa del herrero, cuchillo de palo.",
     "El que mucho abarca, poco aprieta.",
     "Al mal tiempo, buena cara",
-"No hay mal que por bien no venga",
-"Cuando el río suena, agua lleva",
-"Camarón que se duerme, se lo lleva la corriente",
-"Cada quien cosecha lo que siembra",
-"Después de la tormenta, siempre llega la calma",
-"El diablo sabe por viejo, no por diablo",
-"La experiencia es la madre de la ciencia",
-"A viejo león, no le enseñes mañas",
-"Más vale maña que fuerza",
-"Quien mucho duerme, poco aprende",
-"No por mucho madrugar amanece más temprano",
-"A quien madruga, Dios lo ayuda",
-"En abril, aguas mil",
-"Hasta el cuarenta de mayo, no te quites el sayo",
-"Agua de mayo, pan para todo el año",
-"Cría cuervos y te sacarán los ojos",
-"El pez por la boca muere",
-"Quien mucho habla, mucho yerra",
-"Más vale prevenir que curar",
-"Ojos que no ven, corazón que no siente",
-"En boca cerrada no entran moscas",
+    "No hay mal que por bien no venga",
+    "Cuando el río suena, agua lleva",
+    "Camarón que se duerme, se lo lleva la corriente",
+    "Cada quien cosecha lo que siembra",
+    "Después de la tormenta, siempre llega la calma",
+    "El diablo sabe por viejo, no por diablo",
+    "La experiencia es la madre de la ciencia",
+    "A viejo león, no le enseñes mañas",
+    "Más vale maña que fuerza",
+    "Quien mucho duerme, poco aprende",
+    "No por mucho madrugar amanece más temprano",
+    "A quien madruga, Dios lo ayuda",
+    "En abril, aguas mil",
+    "Hasta el cuarenta de mayo, no te quites el sayo",
+    "Agua de mayo, pan para todo el año",
+    "Cría cuervos y te sacarán los ojos",
+    "El pez por la boca muere",
+    "Quien mucho habla, mucho yerra",
+    "Más vale prevenir que curar",
+    "Ojos que no ven, corazón que no siente",
+    "En boca cerrada no entran moscas",
   ];
 
   const saludos = [
@@ -61,7 +60,7 @@ export function ConfirmationScreen({
     "¡Hola",
     "¡Me alegro de verte"
   ];
-  const router = useRouter(); // Correcta inicialización
+
   useEffect(() => {
     setGreeting(saludos[Math.floor(Math.random() * saludos.length)]);
     setRefran(refranes[Math.floor(Math.random() * refranes.length)]);
@@ -87,7 +86,7 @@ export function ConfirmationScreen({
   };
 
   const itemVariants = {
-    hidden: { y: 10, opacity: 0 }, // Reducido el movimiento vertical inicial
+    hidden: { y: 10, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -99,32 +98,34 @@ export function ConfirmationScreen({
     },
   };
 
+  const handleButtonClick = () => {
+    console.log("Botón clickeado, llamando a onComplete");
+    onComplete(); // Esta es la línea crucial que faltaba
+  };
+
   return (
     <motion.div
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="flex flex-col items-center justify-start min-h-screen p-6 text-center bg-gradient-to-b from-blue-50 to-white pt-16" // Cambiado a justify-start y añadido pt-16
+      className="flex flex-col items-center justify-start min-h-screen p-6 text-center bg-gradient-to-b from-blue-50 to-white pt-16"
     >
-      <div className="max-w-md w-full space-y-4"> {/* Reducido el espacio vertical */}
-        {/* Saludo más compacto */}
-        <motion.div variants={itemVariants} className="mb-2"> {/* Reducido margen inferior */}
-          <h1 className="text-3xl font-bold text-blue-700"> {/* Tamaño de texto ligeramente reducido */}
+      <div className="max-w-md w-full space-y-4">
+        <motion.div variants={itemVariants} className="mb-2">
+          <h1 className="text-3xl font-bold text-blue-700">
             {greeting}, <span className="text-blue-900">{userName}!</span>
           </h1>
         </motion.div>
 
-        {/* Fecha más cerca del saludo */}
-        <motion.div variants={itemVariants} className="mb-4"> {/* Margen inferior ajustado */}
-          <div className="text-xl text-gray-700 font-medium"> {/* Tamaño de texto reducido */}
+        <motion.div variants={itemVariants} className="mb-4">
+          <div className="text-xl text-gray-700 font-medium">
             {formattedDate}
           </div>
         </motion.div>
 
-        {/* Separador con refrán más compacto */}
         <motion.div 
           variants={itemVariants}
-          className="relative py-4" /* Reducido el padding vertical */
+          className="relative py-4"
         >
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-blue-200"></div>
@@ -136,16 +137,15 @@ export function ConfirmationScreen({
           </div>
         </motion.div>
 
-        {/* Botón más cerca del refrán */}
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
-          className="mt-6" /* Margen superior reducido */
+          className="mt-6"
         >
           <button
-          onClick={() => router.push('/cognitive-exercises')}    
-          className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white rounded-xl text-xl font-semibold transition-all shadow-lg hover:shadow-xl" /* Tamaños ajustados */
+            onClick={handleButtonClick} // Cambiado para llamar a handleButtonClick
+            className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white rounded-xl text-xl font-semibold transition-all shadow-lg hover:shadow-xl"
           >
             Comenzar Ejercicios
             <span className="block text-sm font-normal mt-1 opacity-90">
@@ -154,10 +154,9 @@ export function ConfirmationScreen({
           </button>
         </motion.div>
 
-        {/* Mensaje final más compacto */}
         <motion.div 
           variants={itemVariants}
-          className="mt-6 text-gray-500 text-md" /* Margen y tamaño reducidos */
+          className="mt-6 text-gray-500 text-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 0.5 } }}
         >
