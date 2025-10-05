@@ -1,23 +1,13 @@
 {
   "exercises": [
-    {
-      "title": "Sopa de letras",
-      "componentName": "WordSearchGame",
-      "duration": 190,
-      "minLevel": 2
-    },
+   
     {
       "title": "Marca la muestra",
       "componentName": "PatternRecognitionGame",
       "duration": 190,
       "minLevel": 1
     },
-    {
-      "title": "Sudokus",
-      "componentName": "SudokuGame",
-      "duration": 190,
-      "minLevel": 2
-    },
+    
     {
       "title": "Busca Minas",
       "componentName": "Buscaminas",
@@ -72,5 +62,20 @@
       "duration": 120,
       "minLevel": 1
     }
+  ],
+  "exercises_ocultuos" : [
+    {
+      "title": "Sopa de letras",
+      "componentName": "WordSearchGame",
+      "duration": 190,
+      "minLevel": 2
+    },
+    {
+      "title": "Sudokus",
+      "componentName": "SudokuGame",
+      "duration": 190,
+      "minLevel": 2
+    }
   ]
+
 }
