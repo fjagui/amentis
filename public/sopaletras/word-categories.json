@@ -1,0 +1,33 @@
+
+[
+    {
+      "name": "Animales",
+      "allWords": ["LEON", "TIGRE", "ELEFANTE", "JIRAFA", "CEBRA", "MONO", "OSO", "LOBO", "PANTERA", "LEOPARDO", "GUEPARDO", "HIPOPOTAMO", "RINOCERONTE", "CANGURO", "KOALA", "PINGÜINO", "AVESTRUZ", "AGUILA", "BUHO", "DELFIN", "TIBURON", "BALLENA", "TORTUGA", "SERPIENTE", "COCODRILO"],
+      "wordsPerGame": 8
+    },
+    {
+      "name": "Frutas",
+      "allWords": ["MANZANA", "PERA", "UVA", "NARANJA", "FRESA", "SANDIA", "MELON", "PLATANO", "KIWI", "PINA", "COCO", "MANGO", "PAPAYA", "LIMON", "LIMA", "CEREZA", "CIRUELA", "HIGO", "GRANADA", "MARACUYA", "FRAMBUESA", "ARANDANO", "MORA", "GROSELLA", "POMELO"],
+      "wordsPerGame": 8
+    },
+    {
+      "name": "Países",
+      "allWords": ["ESPAÑA", "FRANCIA", "ITALIA", "ALEMANIA", "MEXICO", "BRASIL", "CHILE", "ARGENTINA", "COLOMBIA", "PERU", "VENEZUELA", "ECUADOR", "URUGUAY", "PARAGUAY", "BOLIVIA", "COSTARICA", "PANAMA", "CUBA", "REPUBLICADOMINICANA", "ESTADOSUNIDOS", "CANADA", "AUSTRALIA", "NUEVAZELANDA", "JAPON", "CHINA"],
+      "wordsPerGame": 8
+    },
+    {
+      "name": "Deportes",
+      "allWords": ["FUTBOL", "TENIS", "NATACION", "CICLISMO", "BALONCESTO", "VOLEIBOL", "ATLETISMO", "BOXEO", "JUDO", "KARATE", "TAEKWONDO", "GIMNASIA", "ESQUI", "SURF", "SKATE", "PATINAJE", "HOCKEY", "RUGBY", "BEISBOL", "SOFTBOL", "BADMINTON", "PINGPONG", "TIROCONARCO", "ESGRIMA", "LEVANTAMIENTODEPESAS"],
+      "wordsPerGame": 8
+    },
+    {
+      "name": "Profesiones",
+      "allWords": ["MEDICO", "INGENIERO", "PROFESOR", "BOMBERO", "POLICIA", "CHEF", "ARTISTA", "PROGRAMADOR", "ARQUITECTO", "ABOGADO", "CONTADOR", "ENFERMERO", "PSICOLOGO", "PERIODISTA", "FOTOGRAFO", "DISEÑADOR", "MUSICO", "ACTOR", "ESCULTOR", "PINTOR", "CARPINTERO", "ELECTRICISTA", "FONTANERO", "JARDINERO", "AGRICULTOR"],
+      "wordsPerGame": 8
+    },
+    {
+      "name": "Transportes",
+      "allWords": ["COCHE", "AVION", "BARCO", "TREN", "BICICLETA", "MOTO", "AUTOBUS", "HELICOPTERO", "SUBMARINO", "GLOBO", "MONTGOLFIERO", "TRICICLO", "PATINETE", "MONOPATIN", "CAMION", "FURGONETA", "TAXI", "AMBULANCIA", "TRACTOR", "GRUA", "EXCAVADORA", "LANCHA", "VELERO", "YATE", "TRANVIA"],
+      "wordsPerGame": 8
+    }
+  ]

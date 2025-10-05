@@ -1,0 +1,19 @@
+{
+    "users": [
+      {
+        "name": "Rosario",
+        "day": "26",
+        "month": "03",
+        "year": "1939",
+        "level": 1
+      },
+      {
+        "name": "Jose",
+        "day": "30",
+        "month": "12",
+        "year": "1936",
+        "level": 2
+      }
+
+    ]
+  }
