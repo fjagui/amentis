@@ -1,1 +1,782 @@
 
+
+[
+  {
+    "id": 1,
+    "titulo": "El Misterio del Pastel",
+    "texto": "Lucía preparaba un pastel de zanahoria para el cumpleaños de su hijo.\nSiguió la receta al pie de la letra:\n1. Mezcló harina, huevos y zanahoria rallada.\n2. Añadió canela y nueces picadas.\n3. Metió el molde en el horno a 180 grados.\n\nPero al sacarlo, ¡el pastel estaba completamente plano!\n—¿Qué salió mal? —preguntó desconcertada.\n\nSu abuela, experta cocinera, olió la masa cruda.\n—¡Olvidaste el polvo de hornear! —exclamó riendo.\nLucía miró el paquete intacto sobre la mesa.\n—Tienes razón, abuela. ¡Haré otro!",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué tipo de pastel preparaba Lucía?",
+        "opciones": ["De chocolate", "De zanahoria", "De manzana"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Para qué ocasión era el pastel?",
+        "opciones": ["Una boda", "Un cumpleaños", "Una fiesta de trabajo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué problema tuvo el pastel?",
+        "opciones": ["Se quemó", "Quedó crudo", "No subió"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Quién descubrió el error?",
+        "opciones": ["Su hijo", "Su abuela", "Su vecina"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué ingrediente olvidó Lucía?",
+        "opciones": ["Huevos", "Polvo de hornear", "Azúcar"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "El Pastor y la Tormenta",
+    "texto": "Ramón pastoreaba sus cabras en la sierra de Córdoba cuando vio nubes negras.\n—¡Viene tormenta! —gritó a su perro Luna.\nJuntos guiaron al rebaño hacia el refugio de piedra.\n\nPero una cabrita joven, Curiosa, se separó del grupo.\nRamón la encontró asustada bajo un alcornoque.\n—¡Vamos, pequeña! —dijo cargándola en sus brazos.\n\nJusto al entrar al refugio, empezó a llover torrencialmente.\nRamón secó a Curiosa con su manta.\n—Hoy aprendiste a no alejarte —susurró mientras las otras cabras masticaban tranquilamente su heno.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde pastoreaba Ramón?",
+        "opciones": ["En la playa", "En la sierra de Córdoba", "En un valle"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Cómo se llamaba su perro?",
+        "opciones": ["Truco", "Luna", "Fiel"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué animal se separó del grupo?",
+        "opciones": ["Un cordero", "La cabrita Curiosa", "El perro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Dónde encontró Ramón a la cabrita?",
+        "opciones": ["En un río", "Bajo un alcornoque", "En una cueva"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hizo Ramón al entrar al refugio?",
+        "opciones": ["Encendió fuego", "Secó a la cabrita", "Cocinó sopa"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "La Gallina Valiente",
+    "texto": "En una granja de Zagrilla vivía una gallina llamada Clotilde. Cada mañana ponía un huevo y cantaba orgullosa.\n\nUn día, el zorro entró al gallinero mientras todos dormían. Clotilde lo vio y cacareó tan fuerte que despertó al perro guardián.\n\n—¡Alerta, alerta! —gritaba Clotilde.\n\nEl perro corrió y espantó al zorro, que huyó asustado por el campo. Las otras gallinas aplaudieron a Clotilde con sus alas.\n\nDesde ese día, Clotilde fue considerada una heroína en la granja.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde vivía Clotilde?",
+        "opciones": ["En el bosque", "En una granja de Zagrilla", "En la ciudad"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hacía Clotilde cada mañana?",
+        "opciones": ["Salía a pasear", "Volaba", "Ponía un huevo y cantaba"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué animal entró al gallinero?",
+        "opciones": ["Un gato", "Un zorro", "Un lobo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo reaccionó Clotilde al ver al zorro?",
+        "opciones": ["Se escondió", "Salió volando", "Cacareó fuerte"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hicieron las otras gallinas después?",
+        "opciones": ["Aplaudieron con sus alas", "Corrieron al bosque", "Se durmieron"],
+        "respuestaCorrecta": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "La Costurera y el Pantalón Rebelde",
+    "texto": "Doña Berta era la mejor costurera del pueblo. Remendaba, cosía, bordaba... y también perdía las agujas con frecuencia.\n\nUna mañana llegó Don Eulogio con un pantalón roto de una manera misteriosa.\n—No pregunte cómo —dijo, rojo como un tomate.\n\nBerta se puso sus gafas, tomó hilo, y comenzó su arte. Pero cada vez que intentaba coser, el pantalón se le resbalaba de la mesa.\n\n—¡Este pantalón está embrujado! —exclamó.\n\nDespués de mucho esfuerzo, logró terminarlo. Don Eulogio se lo probó y sonrió.\n—¡Ahora sí puedo sentarme sin preocuparme!\n\n—O sin caerte del caballo —murmuró Berta, y ambos soltaron una carcajada.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué hacía Doña Berta?",
+        "opciones": ["Cocinaba pasteles", "Era costurera", "Vendía verduras"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Quién llevó un pantalón roto?",
+        "opciones": ["Don Eulogio", "Doña Clara", "Un niño del pueblo"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué hacía el pantalón mientras Berta lo cosía?",
+        "opciones": ["Se agrandaba solo", "Cambiaba de color", "Se resbalaba de la mesa"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué dijo Berta sobre el pantalón?",
+        "opciones": ["Está embrujado", "Está de moda", "Está muy limpio"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo terminó la historia?",
+        "opciones": ["Con un aplauso", "Con una discusión", "Con una carcajada"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "El Panadero y la Masa Rebelde",
+    "texto": "Don Fermín era el panadero más madrugador del barrio. Cada día, a las cinco en punto, empezaba a preparar su famosa masa secreta.\n\nUna mañana, mientras amasaba medio dormido, la masa salió disparada como una babosa veloz.\n—¡Vuelve aquí, masa escurridiza! —gritó Fermín, corriendo con el rodillo en mano.\n\nLa masa rebotó en el gato, pasó por debajo de la mesa y terminó pegada en el techo.\n\nDespués de mucho esfuerzo, logró bajarla y hornearla. Sorprendentemente, el pan salió delicioso.\n\n—Tiene un sabor... aventurero —dijo la clienta, relamiéndose.\n\nDesde entonces, Fermín la llamó “la baguette fugitiva”.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿A qué hora comenzaba Don Fermín a trabajar?",
+        "opciones": ["A las cinco en punto", "A las siete", "A las diez"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hizo la masa esa mañana?",
+        "opciones": ["Se quemó", "Se volvió invisible", "Salió disparada"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Dónde terminó la masa?",
+        "opciones": ["En la calle", "Pegada en el techo", "En el horno"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo quedó el pan al final?",
+        "opciones": ["Salado", "Delicioso", "Duro como piedra"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo llamó Fermín al pan?",
+        "opciones": ["La barra mágica", "La baguette fugitiva", "El pan dormilón"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "La Heladera y el Calorón",
+    "texto": "En pleno verano, Doña Tina vendía helados en la plaza del pueblo. Era famosa por su helado de sandía con menta.\n\nUn día, el sol pegaba tan fuerte que los conos se derretían antes de llegar a las manos de los niños.\n\n—¡Ay madre! ¡Esto parece sopa fría! —dijo Tina, mientras corría con la nevera portátil.\n\nDecidió servir los helados en vasos con pajita. Los niños estaban felices.\n\n—¡Ahora podemos beberlos! —gritaban mientras se refrescaban.\n\nDesde entonces, Doña Tina ofrecía “helados para beber” en los veranos.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué vendía Doña Tina?",
+        "opciones": ["Churros", "Helados", "Limonada"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Cómo era el clima ese día?",
+        "opciones": ["Lluvioso", "Muy caluroso", "Con viento fuerte"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué pasaba con los conos?",
+        "opciones": ["Se rompían", "Se derretían", "Salían volando"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué solución encontró Tina?",
+        "opciones": ["No vendió nada", "Usó vasos con pajita", "Puso los helados en cubos"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo llamaron los niños a los helados?",
+        "opciones": ["Sopa de frutas", "Helado para beber", "Licuado mágico"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "El Zapatero y la Sandalia Voladora",
+    "texto": "Don Cosme era zapatero y hablaba con sus zapatos mientras los arreglaba. Un día llegó una clienta con una sandalia rota.\n\n—Se me rompió en plena boda —dijo, mostrando la suela suelta.\n\nCosme, concentrado, aplicó pegamento, cosió... y de pronto, ¡la sandalia salió volando!\n\n—¡Es que lleva mucho ritmo! —bromeó.\n\nLa clienta rió tanto que decidió dejarle ambos zapatos para equilibrar la energía.\n\n—¡Y por si acaso, pégales bien las ganas de bailar!",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿A qué se dedicaba Don Cosme?",
+        "opciones": ["Era panadero", "Era zapatero", "Era bailarín"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué trajo la clienta?",
+        "opciones": ["Unos botines", "Una sandalia rota", "Un bolso viejo"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué pasó mientras Cosme trabajaba?",
+        "opciones": ["La sandalia voló", "Se durmió", "Se quemó la suela"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué hizo la clienta al final?",
+        "opciones": ["Se enfadó", "Le dejó ambos zapatos", "Pidió un reembolso"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué comentario gracioso hizo Cosme?",
+        "opciones": ["¡Tiene alas!", "¡Es que lleva mucho ritmo!", "¡Zapato saltarín!"],
+        "respuestaCorrecta": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "La Romería de la Abuela Cloti",
+    "texto": "Cada año, la abuela Cloti preparaba empanadas para la romería del pueblo. Este año decidió llevar cien, pero su nieto Mateo tropezó y cayó encima del cesto.\n\n—¡Ay mi espalda! —gritó Mateo.\n—¡Ay mis empanadas! —gritó Cloti.\n\nAunque llegaron un poco aplastadas, la gente decía:\n—¡Están más sabrosas que nunca!\n\nDesde entonces, las llamó “empanadas con cariño y pisotón”.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué preparaba la abuela Cloti para la romería?",
+        "opciones": ["Galletas", "Empanadas", "Tortillas"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Quién tropezó con el cesto?",
+        "opciones": ["El cura", "El nieto Mateo", "Un perro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Cómo quedaron las empanadas?",
+        "opciones": ["Aplastadas", "Quemadas", "Heladas"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué dijo la gente del sabor?",
+        "opciones": ["No tenían gusto", "Eran más sabrosas que nunca", "Sabían raro"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Cómo las llamó Cloti después?",
+        "opciones": ["Empanadas mágicas", "Empanadas de la suerte", "Empanadas con cariño y pisotón"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "titulo": "La Jardinera y el Girasol Bailarín",
+    "texto": "Lucía adoraba sus plantas, pero especialmente un girasol que siempre miraba al sol con exagerado entusiasmo.\n\nUn día de mucho viento, el girasol empezó a girar como trompo.\n—¡Ay madre, que me sale bailarín! —dijo Lucía.\n\nLe puso una cinta para sujetarlo, pero el girasol seguía girando cada vez que oía música.\n\nLos vecinos venían a verlo bailar con la radio. Y Lucía empezó a cobrar entrada:\n—¡Bienvenidos al show del girasol bailarín!",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué cuidaba Lucía con cariño?",
+        "opciones": ["Un rosal", "Un bonsái", "Un girasol"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué pasaba con el girasol cuando hacía viento?",
+        "opciones": ["Se caía", "Se marchitaba", "Giraba como un trompo"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué hacía el girasol cuando oía música?",
+        "opciones": ["Se ponía triste", "Dejaba de girar", "Seguía girando"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Qué hacían los vecinos?",
+        "opciones": ["Le traían agua", "Venían a verlo", "Lo regaban"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué hizo Lucía con el espectáculo?",
+        "opciones": ["Lo ignoró", "Lo grabó", "Cobró entrada"],
+        "respuestaCorrecta": 2
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "titulo": "El Socorrista Dormilón",
+    "texto": "En la piscina municipal, Julián era el socorrista. Siempre atento... excepto justo después de almorzar.\n\nUna vez, se quedó dormido en su silla alta. Los niños lo vieron roncando con gafas de sol.\n\n—¡Está entrenando apnea en seco! —bromeó uno.\n\nLe dibujaron un bigote con crema solar y lo despertaron con una bomba en la piscina.\n\n—¡Estoy en alerta! —dijo sobresaltado, con el bigote blanco aún puesto.\n\nDesde ese día, Julián no volvió a dormirse… al menos no sin sombrilla.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Dónde trabajaba Julián?",
+        "opciones": ["En la playa", "En la piscina municipal", "En un parque"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Qué hacía después de comer?",
+        "opciones": ["Jugaba al fútbol", "Se dormía", "Leía cuentos"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué le dibujaron los niños?",
+        "opciones": ["Un bigote", "Un corazón", "Un tiburón"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Con qué lo despertaron?",
+        "opciones": ["Un silbato", "Un grito", "Una bomba en la piscina"],
+        "respuestaCorrecta": 2
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué prometió Julián después?",
+        "opciones": ["No volver a dormirse", "Cambiar de trabajo", "Llevar gafas nuevas"],
+        "respuestaCorrecta": 0
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "titulo": "Los Secretos de la Abuela Jabonera",
+    "texto": "En un pequeño pueblo, la vecina Pura era famosa por sus jabones perfumados. Cada luna llena, preparaba una nueva con métodos antiguos.\n\nPrimero, recogía cenizas de la chimenea y las mezclaba con agua en una gran olla de barro. —Así se hace la lejía, niña —le explicaba a su nieta mientras removía con un palo de olivo—. ¡Y cuidado con salpicar!\n\nLuego añadía la grasa de cerdo que guardaba en tarros. La mezcla burbujeaba durante horas, esparciendo un olor fuerte. —Ahora viene lo bueno —decía, agregando romero o lavanda para perfumar.\n\nLos vecinos hacían cola para comprar sus jabones. —¡Hacen espuma como nada! —decía el panadero. Un día, la nieta derramó la mezcla y creó jabones con forma de luna. —¡Mira qué invento! —rió la abuela. Desde entonces, hicieron jabones con formas divertidas.",
+    "preguntas": [
+      {
+        "id": 1,
+        "pregunta": "¿Qué usaba la abuela para hacer lejía?",
+        "opciones": ["Sal y vinagre", "Cenizas y agua", "Jugo de limón"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 2,
+        "pregunta": "¿Con qué removía la mezcla?",
+        "opciones": ["Cuchara de metal", "Palo de olivo", "Varilla de cristal"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 3,
+        "pregunta": "¿Qué añadía para perfumar el jabón?",
+        "opciones": ["Romero o lavanda", "Canela o clavo", "Pétalos de rosa"],
+        "respuestaCorrecta": 0
+      },
+      {
+        "id": 4,
+        "pregunta": "¿Cómo se crearon los jabones con forma?",
+        "opciones": ["Con moldes especiales", "Derramando la mezcla", "Tallándolos después"],
+        "respuestaCorrecta": 1
+      },
+      {
+        "id": 5,
+        "pregunta": "¿Qué decía el panadero de los jabones?",
+        "opciones": ["Que duraban mucho", "Que hacían buena espuma", "Que olían fuerte"],
+        "respuestaCorrecta": 1
+      }
+    ]
+},
+{
+  "id": 12,
+  "titulo": "Las Macetas de la Tía Remedios",
+  "texto": "En el patio de la tía Remedios, las macetas de pilistras eran famosas en todo el pueblo. Las hacía con barro, paja y un poco de cal, amasándolas con sus manos rugosas. —Así respiran las raíces —decía mientras moldeaba una junto al pozo.\n\nCada maceta tenía dueño antes de nacer: una para el albahacar del cura, otra para los geranios de la vecina, y una pequeña para los tomates cherry de su nieto. Las pintaba con tintes naturales: rojo de arcilla, blanco de yeso y azul añil que traían de comercio.\n\nUn día, un perro callejero corrió por el patio y rompió tres macetas. —¡Bendita sea! —suspiró la tía—. Ahora tendremos macetas nuevas con trocitos de las viejas. Las reconstruyó mezclando los pedazos, creando un mosaico de historias. Desde entonces, sus macetas llevaban «cicatrices» que contaban leyendas del barrio.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Con qué materiales hacía macetas la tía Remedios?",
+      "opciones": ["Plástico y arena", "Barro, paja y cal", "Madera y clavos"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Por qué decía que sus macetas «respiraban»?",
+      "opciones": ["Por los agujeros", "Por el material poroso", "Porque las cantaba"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué usaba para pintarlas?",
+      "opciones": ["Pinturas de ferretería", "Tintes naturales", "Lápices de colores"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué pasó con las macetas rotas?",
+      "opciones": ["Las tiró a la basura", "Las reconstruyó con mosaicos", "Las enterró en el jardín"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué representaban las «cicatrices» de las macetas nuevas?",
+      "opciones": ["Errores de fabricación", "Historias del barrio", "Marcas de animales"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 13,
+  "titulo": "La Siega del Abuelo Ramón",
+  "texto": "En pleno julio, el abuelo Ramón y sus nietos comenzaban la siega al amanecer. Con hoces afiladas y sombreros de paja, cortaban el trigo dorado mientras los grillos cantaban. —¡Cuidado con las espigas! —avisaba Ramón—. Cada grano es pan de mañana.\n\nLos fajines se amontonaban en parvas que olían a tierra caliente y hierba seca. Para el mediodía, cargaban los burros con las gavillas camino de la era. —¡Agua de la tinaja, abuelo! —gritaba la nieta pequeña, ofreciendo un jarro frío.\n\nUn día, el cielo se puso negro como la pez. —¡Tormenta! —gritó Ramón—. Cubran la última parva con los mantones. Entre todos, salvaron la cosecha bajo la lluvia. Al terminar, Ramón trenzó una cruz de espigas para la puerta. —Así siempre recordaremos este verano —dijo con los ojos brillantes.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿En qué mes se realizaba la siega?",
+      "opciones": ["Mayo", "Julio", "Septiembre"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué herramienta usaban para cortar el trigo?",
+      "opciones": ["Guadaña", "Azada", "Hoz"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cómo llamaban a los montones de trigo?",
+      "opciones": ["Almiares", "Parvas", "Gavillas"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué amenazó la cosecha?",
+      "opciones": ["Langostas", "Tormenta", "Incendio"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué hizo Ramón para recordar ese verano?",
+      "opciones": ["Tomó una foto", "Tejió una cruz de espigas", "Escribió un diario"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 14,
+  "titulo": "La Guerra del Cántaro",
+  "texto": "Cada tarde, los jóvenes del pueblo iban a la fuente de la plaza. Las chicas llevaban cántaros de cerámica, y los chicos, cubos de hojalata. —¡El primero en llenar paga horchata! —gritaba Pepe mientras esquivaba el chorro de agua.\n\nUn día, Lucía ideó una travesura: conectó mangueras ocultas entre los geranios. Cuando Tomás abrió el grifo, recibió un baño sorpresa. —¡Agua fresca para el calor! —rió Lucía, mojando su trenza rebelde.\n\nLos chicos contraatacaron con esponjas empapadas, pero Clara descubrió que cantando coplas .el agua salía a ritmo. —¡Miren! —exclamó cuando el chorro bailó al compás de la música. Al final, todos terminaron empapados y riendo, con los cántaros convertidos en tambores improvisados.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué llevaban las chicas a la fuente?",
+      "opciones": ["Cubos de hojalata", "Botellas de vidrio", "Cántaros de cerámica"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué hizo Lucía para gastar una broma?",
+      "opciones": ["Puso jabón en el agua", "Escondió mangueras", "Tapó el grifo"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Quién recibió el primer baño sorpresa?",
+      "opciones": ["Pepe", "Tomás", "Clara"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cómo respondieron los chicos?",
+      "opciones": ["Con globos de agua", "Con esponjas empapadas", "Con cubos vacíos"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué descubrió Clara sobre el agua?",
+      "opciones": ["Que bailaba con música", "Que cambiaba de color", "Que sabía a limón"],
+      "respuestaCorrecta": 0
+    }
+  ]
+},
+{
+  "id": 15,
+  "titulo": "El Carmen de las Trenzas Mojadas",
+  "texto": "Cada 16 de julio, los jóvenes del pueblo preparaban la fiesta del Carmen con travesuras y alegría. Las chicas tejían coronas de flores para la virgen, mientras los chicos colgaban farolillos en las barcas. —¡La que haga la corona más bonita gana un helado! —retó Lucía, lanzando un clavel a Pablo.\n\nDurante la procesión marinera, ocurrió el 'milagro' del año: cuando la imagen pasó junto al muelle, el barquero más joven tropezó con una red. —¡Atención a la ola! —avisó Carmen, pero era tarde. Un chapuzón accidental mojó las trenzas de las chicas y los pantalones blancos de los chicos.\n\nEn vez de enfadarse, todos rieron y transformaron el percance en fiesta. Con las flores empapadas, crearon un nuevo juego: \"pétalos húmedos al aire\". Al anochecer, bailaron sevillanas en la playa con la ropa todavía goteando, prometiendo repetir el \"baño bendito\" cada año.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué fecha se celebraba?",
+      "opciones": ["15 de mayo", "16 de julio", "12 de octubre"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué hacían las chicas para la fiesta?",
+      "opciones": ["Colgaban farolillos", "Tejían coronas de flores", "Cocinaban paella"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué pasó durante la procesión?",
+      "opciones": ["Se rompió una barca", "Un chapuzón mojó a todos", "Apareció un delfín"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cómo reaccionaron al mojarse?",
+      "opciones": ["Se enfadaron", "Lo transformaron en fiesta", "Cancelaron la celebración"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué crearon con las flores mojadas?",
+      "opciones": ["Un altar flotante", "Un juego con pétalos", "Infusiones aromáticas"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 16,
+  "titulo": "El Tacón de Lola",
+  "texto": "En una gira por Sevilla, Lola Flores llegó tarde a su propio espectáculo. —¡La niña de Frasquito está en apuros! —gritó al entrar al teatro con su traje de lunares desabrochado—. El coche se pinchó y tuve que venir bailando por la acera.\n\nAl subir al escenario, su tacón izquierdo se atascó en una tabla suelta. —¡Olé las tablas cometaíllas! —bromeó mientras intentaba liberarse. De un tirón brusco, el tacón saltó volando hacia el patio de butacas, aterrizando en el regazo de un caballero sorprendido.\n\nEn vez de detenerse, Lola siguió el show con un solo zapato. —¡Ese tacón tiene más viaje que yo! —improvisó cantando. Al final, el caballero devolvió el zapato lleno de claveles que el público le lanzó. Esa noche, Lola bailó por sevillanas con un zapato de tacón y otro de alpargata, creando su legendario \"estilo desigual\".",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Dónde ocurrió esta anécdota?",
+      "opciones": ["En un tablao de Madrid", "En un teatro de Sevilla", "En una feria de Jerez"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Por qué llegó tarde Lola?",
+      "opciones": ["Su tren se retrasó", "Pinchó su coche", "Perdió su vestuario"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué problema tuvo en el escenario?",
+      "opciones": ["Se le rompió el vestido", "Se atascó su tacón", "Se apagaron las luces"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Dónde aterrizó el tacón?",
+      "opciones": ["En el foso de la orquesta", "En el regazo de un espectador", "En las manos del guitarrista"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cómo terminó bailando?",
+      "opciones": ["Descalza", "Con dos zapatos distintos", "Sobre las puntillas"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 17,
+  "titulo": "El Bizcocho Volcán de Abuela Pilar",
+  "texto": "La abuela Pilar enseñaba a sus nietos su famoso bizcocho de chocolate en 4 pasos mágicos. —Primero: ¡Batir los huevos con azúcar hasta que parezcan nubes amarillas! —decía mientras Lucas movía la batidora—. Segundo: añadir aceite y leche poco a poco, como llovizna.\n\n—¿Tercero, abuela? —preguntó Sofía ansiosa—. ¡El toque secreto! —respondió Pilar, mezclando cacao con una pizca de sal—. Así el chocolate sabe más chocolate. Por último, hornear 20 minutos SIN abrir el horno. —¡Es trampa mirar! —regañó al ver a Lucas acercarse.\n\nCuando sonó el despertador, descubrieron un pequeño desastre: el bizcocho tenía un cráter en el centro. —¡Miren! —rió Sofía—. Es un volcán de chocolate. Rellenaron el hueco con nutella y fresas. Desde ese día, el \"bizcocho volcán\" se convirtió en su postre favorito.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué debían batir en el primer paso?",
+      "opciones": ["Huevos con harina", "Huevos con azúcar", "Leche con cacao"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cómo comparaba la abuela el aceite y leche?",
+      "opciones": ["Como un río", "Como llovizna", "Como una cascada"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Cuál era el \"toque secreto\"?",
+      "opciones": ["Canela en polvo", "Sal con cacao", "Vainilla líquida"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué error cometió Lucas?",
+      "opciones": ["Rompió un huevo", "Abrió el horno antes de tiempo", "Usó sal en vez de azúcar"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cómo arreglaron el cráter del bizcocho?",
+      "opciones": ["Con crema batida", "Con nutella y fresas", "Con más masa"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 18,
+  "titulo": "Caminante, Son Tus Huellas",
+  "texto": "El poeta Antonio Machado escribió en su libro 'Campos de Castilla' este famoso poema:\n\n\"Caminante, son tus huellas\nel camino, y nada más;\ncaminante, no hay camino,\nse hace camino al andar.\n\nAl andar se hace el camino,\ny al volver la vista atrás\nse ve la senda que nunca\nse ha de volver a pisar.\n\nCaminante, no hay camino,\nsino estelas en la mar.\"\n\nUn joven estudiante llamado Martín copiaba estos versos en su cuaderno bajo un árbol. —Maestro —preguntó a su profesor—, ¿significa que cada uno crea su destino? El profesor asintió: —Como esas hormigas que trazan nuevos caminos en la tierra. Al salir de clase, Martín eligió un atajo diferente a casa. Sus pasos dejaron huellas frescas sobre la nieve, creando su propio camino.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿En qué libro aparece este poema?",
+      "opciones": ["Soledades", "Platero y yo", "Campos de Castilla"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 2,
+      "pregunta": "Según el poema, ¿cómo se hace el camino?",
+      "opciones": ["Al planificar", "Al andar", "Al mirar el mapa"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué comparación usó el profesor?",
+      "opciones": ["Pájaros migratorios", "Hormigas trazando caminos", "Ríos que buscan el mar"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué hizo Martín al salir de clase?",
+      "opciones": ["Copió más poemas", "Siguió el mismo camino", "Tomó un atajo diferente"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Sobre qué dejó Martín sus huellas?",
+      "opciones": ["Arena de playa", "Barro del camino", "Nieve recién caída"],
+      "respuestaCorrecta": 2
+    }
+  ]
+},
+{
+  "id": 19,
+  "titulo": "El Faro de las Mareas Perdidas",
+  "texto": "En la playa de Marbella, el pequeño Hugo encontró una botella antigua con un mapa amarillento. —Mira, abuelo —dijo—. ¡Muestra nuestro faro abandonado! Esa noche, subieron sigilosos al viejo faro. Al llegar, descubrieron que la última marea había dejado la puerta abierta.\n\nDentro, una escalera de caracol llevaba a una habitación con extrañas herramientas: un reloj de arena sin marcar horas, una brújula que apuntaba siempre a la luna y un diario mojado. En la última página legible, Hugo leyó: \"Cuando la luna llene el ojo de cristal, el secreto se revelará\"..\n\nDe repente, un rayo de luna llena atravesó la lente del faro, proyectando un mapa estelar en la pared. —¡Son las islas Cíes! —susurró el abuelo—. Allí desapareció el barco del capitán Rojas. Al día siguiente, encontraron un cofre enterrado bajo la marca de la marea alta. Dentro solo había un espejo con la inscripción: \"El verdadero tesoro es lo que el mar te devuelve\".",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué encontró Hugo en la playa?",
+      "opciones": ["Un cofre antiguo", "Una botella con mapa", "Un diario mojado"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué herramienta NO vieron en el faro?",
+      "opciones": ["Reloj de arena", "Brújula lunar", "Catalejo dorado"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué condición revelaba el secreto?",
+      "opciones": ["Cuando suba la marea", "Cuando la luna llene el ojo de cristal", "Cuando canten las gaviotas"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué descubrió el rayo de luna?",
+      "opciones": ["Un pasadizo secreto", "Un mapa estelar", "Un mensaje en código"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué contenía el cofre?",
+      "opciones": ["Monedas de oro", "Un espejo con inscripción", "El diario completo"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
+{
+  "id": 20,
+  "titulo": "El Secreto de la Radionovela",
+  "texto": "En el verano de 1973, la siesta en casa de los Benítez tenía un ritual: persianas bajadas, abanicos de madera y la radio sintonizando \"Lágrimas de Terciopelo\". La abuela Remedios escuchaba religiosamente mientras bordaba, sus nietos fingían dormir en el sofá de mimbre. —¡Ese Mauricio es un canalla! —murmuraba cuando el villano engañaba a la protagonista.\n\nUn día, durante el capítulo crucial, la radio empezó a sonar con interferencias. —¡Ay, la válvula! —suspiró el abuelo. Mientras él golpeaba suavemente el aparato, Remedios siguió la historia: —Seguro que Rosalía descubre la carta escondida en el reloj de péndulo...\n\nMilagrosamente, al día siguiente la radionovela coincidió exactamente con lo que Remedios había inventado. —¿Cómo lo sabía, abuela? —preguntó la nieta asombrada. Remedios sonrió misteriosamente: —Cuando trabajé en Radio Sevilla, escribía los guiones... ese episodio es mío. Desde entonces, cada vez que la radio fallaba, los nietos pedían: \"¡Cuéntanos tu final, abuela!\".",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué hacía la abuela mientras escuchaba la radio?",
+      "opciones": ["Cocinaba", "Bordaba", "Leía el periódico"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cómo se llamaba la radionovela?",
+      "opciones": ["Rosas del Amor", "Lágrimas de Terciopelo", "Suspiros de Medianoche"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué problema surgió con la radio?",
+      "opciones": ["Se apagó", "Tenía interferencias", "Cambió de emisora"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué reveló la abuela sobre la radionovela?",
+      "opciones": ["Que era actriz", "Que escribía los guiones", "Que conocía al protagonista"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué pedían los nietos después del secreto?",
+      "opciones": ["Comprar una radio nueva", "Ir a Radio Sevilla", "Que contara su final"],
+      "respuestaCorrecta": 2
+    }
+  ]
+},
+{
+  "id": 21,
+  "titulo": "Las Sillas de la Calle Luna",
+  "texto": "En el caluroso verano de 1978, la calle Luna se transformaba cada noche. A las diez en punto, las puertas se abrían y las sillas de anea salían como estrellas al firmamento. —¡Bajamos el termómetro con charla fresca! —gritaba don Ramón desde su silla trono.\n\nLos niños jugaban al tejo bajo la luz del farol mientras los adultos formaban corrillos. En la acera número 5, la novedad era el transistor de la señora Matilde que sintonizaba partidos de fútbol. —¡Gol de Santillana! —anunciaba la radio, provocando aplausos y protestas que se mezclaban con el croar de los grillos.\n\nUna noche, se fue la luz en todo el barrio. —¡Silencio! —pidió la abuela Chelo—. ¿Oyen eso? En la oscuridad, descubrieron el concierto oculto de la calle: el rasgueo de un guitarrista invisible, el tintineo de las botellas del lechero y hasta los suspiros de los enamorados tras las persianas. Cuando volvió la luz, nadie entró en casa. Prefirieron quedarse a escuchar la sinfonía de la noche.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué sacaban los vecinos a la calle?",
+      "opciones": ["Mesas de picnic", "Sillas de anea", "Colchones"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué hacían los niños bajo el farol?",
+      "opciones": ["Contar estrellas", "Jugar al tejo", "Oír cuentos"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué transmitía el transistor de Matilde?",
+      "opciones": ["Radionovelas", "Partidos de fútbol", "Canciones de verano"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué descubrieron durante el apagón?",
+      "opciones": ["Un ladrón", "Sonidos nocturnos ocultos", "Un gato en los tejados"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué hicieron cuando volvió la luz?",
+      "opciones": ["Entraron en casa", "Fueron a dormir", "Siguieron en la calle"],
+      "respuestaCorrecta": 2
+    }
+  ]
+}
+
+]
