@@ -110,43 +110,43 @@
     }
   ]
 },
-  {
-    "id": 4,
-    "titulo": "La Costurera y el Pantalón Rebelde",
-    "texto": "Doña Berta era la mejor costurera del pueblo. Remendaba, cosía, bordaba... y también perdía las agujas con frecuencia.\n\nUna mañana llegó Don Eulogio con un pantalón roto de una manera misteriosa.\n—No pregunte cómo —dijo, rojo como un tomate.\n\nBerta se puso sus gafas, tomó hilo, y comenzó su arte. Pero cada vez que intentaba coser, el pantalón se le resbalaba de la mesa.\n\n—¡Este pantalón está embrujado! —exclamó.\n\nDespués de mucho esfuerzo, logró terminarlo. Don Eulogio se lo probó y sonrió.\n—¡Ahora sí puedo sentarme sin preocuparme!\n\n—O sin caerte del caballo —murmuró Berta, y ambos soltaron una carcajada.",
-    "preguntas": [
-      {
-        "id": 1,
-        "pregunta": "¿Qué hacía Doña Berta?",
-        "opciones": ["Cocinaba pasteles", "Era costurera", "Vendía verduras"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 2,
-        "pregunta": "¿Quién llevó un pantalón roto?",
-        "opciones": ["Don Eulogio", "Doña Clara", "Un niño del pueblo"],
-        "respuestaCorrecta": 0
-      },
-      {
-        "id": 3,
-        "pregunta": "¿Qué hacía el pantalón mientras Berta lo cosía?",
-        "opciones": ["Se agrandaba solo", "Cambiaba de color", "Se resbalaba de la mesa"],
-        "respuestaCorrecta": 2
-      },
-      {
-        "id": 4,
-        "pregunta": "¿Qué dijo Berta sobre el pantalón?",
-        "opciones": ["Está embrujado", "Está de moda", "Está muy limpio"],
-        "respuestaCorrecta": 0
-      },
-      {
-        "id": 5,
-        "pregunta": "¿Cómo terminó la historia?",
-        "opciones": ["Con un aplauso", "Con una discusión", "Con una carcajada"],
-        "respuestaCorrecta": 2
-      }
-    ]
-  },
+ {
+  "id": 4,
+  "titulo": "Las Campanas de Belén",
+  "texto": "Campana sobre campana, y sobre campana una. Asomado a la ventana, verás al Niño en la cuna. \n\nUn pastor que vigilaba sus ovejas en el monte escuchó el sonido de los ángeles. Sin pensarlo dos veces, recogió su zurrón y se puso en camino. \n—¿A dónde vas, pastorcito? —le preguntaron las estrellas.\n—Voy al portal a ver al Dios que ha nacido —respondió él con emoción.\n\nAl llegar, le entregó al Niño un requesón, una jarra de leche y un poco de miel de la sierra. Las campanas no dejaban de tocar, anunciando a todo el mundo que la Navidad por fin había llegado.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué se ve al asomarse a la ventana?",
+      "opciones": ["A los Reyes Magos", "Al Niño en la cuna", "A un ángel volando"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Dónde estaba el pastor al principio?",
+      "opciones": ["En el mercado", "En el monte", "En la iglesia"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué objeto usó el pastor para llevar sus cosas?",
+      "opciones": ["Una mochila", "Un zurrón", "Una maleta"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué regalos le llevó el pastor al Niño?",
+      "opciones": ["Oro, incienso y mirra", "Juguetes de madera", "Requesón, leche y miel"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué anunciaban las campanas con su sonido?",
+      "opciones": ["Que era la hora de dormir", "Que la Navidad había llegado", "Que iba a llover"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
   {
     "id": 5,
     "titulo": "El Panadero y la Masa Rebelde",
