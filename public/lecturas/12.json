@@ -73,43 +73,43 @@
     }
   ]
 },
-  {
-    "id": 3,
-    "titulo": "La Gallina Valiente",
-    "texto": "En una granja de Zagrilla vivía una gallina llamada Clotilde. Cada mañana ponía un huevo y cantaba orgullosa.\n\nUn día, el zorro entró al gallinero mientras todos dormían. Clotilde lo vio y cacareó tan fuerte que despertó al perro guardián.\n\n—¡Alerta, alerta! —gritaba Clotilde.\n\nEl perro corrió y espantó al zorro, que huyó asustado por el campo. Las otras gallinas aplaudieron a Clotilde con sus alas.\n\nDesde ese día, Clotilde fue considerada una heroína en la granja.",
-    "preguntas": [
-      {
-        "id": 1,
-        "pregunta": "¿Dónde vivía Clotilde?",
-        "opciones": ["En el bosque", "En una granja de Zagrilla", "En la ciudad"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 2,
-        "pregunta": "¿Qué hacía Clotilde cada mañana?",
-        "opciones": ["Salía a pasear", "Volaba", "Ponía un huevo y cantaba"],
-        "respuestaCorrecta": 2
-      },
-      {
-        "id": 3,
-        "pregunta": "¿Qué animal entró al gallinero?",
-        "opciones": ["Un gato", "Un zorro", "Un lobo"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 4,
-        "pregunta": "¿Cómo reaccionó Clotilde al ver al zorro?",
-        "opciones": ["Se escondió", "Salió volando", "Cacareó fuerte"],
-        "respuestaCorrecta": 2
-      },
-      {
-        "id": 5,
-        "pregunta": "¿Qué hicieron las otras gallinas después?",
-        "opciones": ["Aplaudieron con sus alas", "Corrieron al bosque", "Se durmieron"],
-        "respuestaCorrecta": 0
-      }
-    ]
-  },
+{
+  "id": 3,
+  "titulo": "Camino de Belén",
+  "texto": "Hacia Belén va una burra cargada de chocolate. Lleva su trote alegre mientras su dueño, un humilde molinero, le canta para animarla. \nEn el camino, se cruzan con unos gitanillos que han perdido sus mantas, pero no la alegría. \n\nAl llegar al portal, la Virgen María está lavando unos pañales en el río, mientras San José los tiende en el romero. Los pajarillos cantan para que el Niño Jesús no llore. \n\n—¡Cuidado, burrita, no te comas las pajas del pesebre! —dice el molinero riendo.\n\nAl final, todos se reúnen alrededor de la hoguera con la zambomba y el almirez, celebrando que el sol sale por la noche en ese humilde rincón.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué carga lleva la burra en su camino?",
+      "opciones": ["Paja y leña", "Chocolate", "Mantecados de Estepa"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué está haciendo la Virgen María según el texto?",
+      "opciones": ["Cocinando migas", "Lavando pañales en el río", "Cantando una nana"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Dónde tiende San José la ropa?",
+      "opciones": ["En un cordel", "En el romero", "En la higuera"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué instrumentos tocan al final de la historia?",
+      "opciones": ["La guitarra y el piano", "El tambor y la flauta", "La zambomba y el almirez"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Por qué cantan los pajarillos?",
+      "opciones": ["Porque tienen hambre", "Para que el Niño no llore", "Para despertar al pueblo"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
   {
     "id": 4,
     "titulo": "La Costurera y el Pantalón Rebelde",
