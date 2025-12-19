@@ -37,42 +37,42 @@
     ]
   },
   {
-    "id": 2,
-    "titulo": "El Pastor y la Tormenta",
-    "texto": "Ramón pastoreaba sus cabras en la sierra de Córdoba cuando vio nubes negras.\n—¡Viene tormenta! —gritó a su perro Luna.\nJuntos guiaron al rebaño hacia el refugio de piedra.\n\nPero una cabrita joven, Curiosa, se separó del grupo.\nRamón la encontró asustada bajo un alcornoque.\n—¡Vamos, pequeña! —dijo cargándola en sus brazos.\n\nJusto al entrar al refugio, empezó a llover torrencialmente.\nRamón secó a Curiosa con su manta.\n—Hoy aprendiste a no alejarte —susurró mientras las otras cabras masticaban tranquilamente su heno.",
-    "preguntas": [
-      {
-        "id": 1,
-        "pregunta": "¿Dónde pastoreaba Ramón?",
-        "opciones": ["En la playa", "En la sierra de Córdoba", "En un valle"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 2,
-        "pregunta": "¿Cómo se llamaba su perro?",
-        "opciones": ["Truco", "Luna", "Fiel"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 3,
-        "pregunta": "¿Qué animal se separó del grupo?",
-        "opciones": ["Un cordero", "La cabrita Curiosa", "El perro"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 4,
-        "pregunta": "¿Dónde encontró Ramón a la cabrita?",
-        "opciones": ["En un río", "Bajo un alcornoque", "En una cueva"],
-        "respuestaCorrecta": 1
-      },
-      {
-        "id": 5,
-        "pregunta": "¿Qué hizo Ramón al entrar al refugio?",
-        "opciones": ["Encendió fuego", "Secó a la cabrita", "Cocinó sopa"],
-        "respuestaCorrecta": 1
-      }
-    ]
-  },
+  "id": 2,
+  "titulo": "El Cambio de Don Baltasar",
+  "texto": "Don Baltasar era el hombre más huraño de un pequeño pueblo de la sierra de Cádiz.\nMientras todos preparaban los mantecados y el anís, él cerraba sus puertas con doble cerrojo.\nSin embargo, la noche de Navidad recibió tres visitas inesperadas:\n1. El Espíritu de los Tiempos Idos le recordó cuando era un niño que jugaba en la plaza.\n2. El Espíritu del Ahora le mostró a su vecino, el sacristán, compartiendo un humilde plato de migas con alegría.\n3. El Espíritu de lo que Vendrá le enseñó que, si seguía así, nadie le llevaría flores al cementerio.\n\nAl despertar con el sonido de las campanas, Baltasar corrió a la plaza.\n—¡Felices fiestas a todo el pueblo! —gritaba mientras repartía jamón y dulces entre los vecinos.\nDesde aquel día, no hubo candela ni zambomba en la que Baltasar no fuera el primero en cantar.",
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Dónde vive Don Baltasar?",
+      "opciones": ["En una gran ciudad", "En un pueblo de la sierra", "En la playa"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Qué comida preparaban los vecinos en el texto?",
+      "opciones": ["Mantecados y anís", "Pasteles de zanahoria", "Pavo relleno"],
+      "respuestaCorrecta": 0
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué le mostró el segundo espíritu?",
+      "opciones": ["Su infancia", "A su vecino comiendo migas", "Un cementerio"],
+      "respuestaCorrecta": 1
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué repartió Baltasar al final de la historia?",
+      "opciones": ["Caramelos y juguetes", "Dinero y ropa", "Jamón y dulces"],
+      "respuestaCorrecta": 2
+    },
+    {
+      "id": 5,
+      "pregunta": "¿En qué eventos empezó a participar Baltasar?",
+      "opciones": ["En las ferias de verano", "En candelas y zambombas", "En el mercado de abastos"],
+      "respuestaCorrecta": 1
+    }
+  ]
+},
   {
     "id": 3,
     "titulo": "La Gallina Valiente",
